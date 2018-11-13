@@ -1,12 +1,12 @@
 {
   "name": "sketch-data-faker",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Sketch data plugin providing data for you mockups from Faker.js",
   "engines": {
     "sketch": ">=3.0"
   },
   "skpm": {
-    "name": "sketch-data-faker",
+    "name": "Sketch Data Faker",
     "manifest": "src/manifest.json",
     "main": "sketch-data-faker.sketchplugin",
     "assets": [
@@ -21,5 +21,8 @@
   },
   "devDependencies": {
     "@skpm/builder": "^0.5.11"
+  },
+  "dependencies": {
+    "faker": "^4.1.0"
   }
 }

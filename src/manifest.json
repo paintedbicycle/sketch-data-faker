@@ -5,17 +5,18 @@
   "suppliesData": true,
   "commands": [
     {
-      "script": "my-command.js",
+      "script": "index.js",
       "handlers": {
         "actions": {
           "Startup": "onStartup",
           "Shutdown": "onShutdown",
-          "SupplyData": "onSupplyData"
+          "SupplyEmailAddress": "onSupplyEmailAddress",
+          "SupplyFullName": "onSupplyFullName"
         }
       }
     }
   ],
   "menu": {
-    "title": "sketch-data-faker"
+    "title": "Sketch Data Faker"
   }
 }
