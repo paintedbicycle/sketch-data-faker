@@ -13,6 +13,10 @@
       "assets/**/*"
     ]
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paintedbicycle/sketch-data-faker.git"
+  },
   "scripts": {
     "build": "skpm-build",
     "watch": "skpm-build --watch",
