@@ -10,8 +10,14 @@
         "actions": {
           "Startup": "onStartup",
           "Shutdown": "onShutdown",
-          "SupplyEmailAddress": "onSupplyEmailAddress",
-          "SupplyFullName": "onSupplyFullName"
+          "SupplyAutomatically": "onSupplyAutomatically",
+          "SupplyEmail": "onSupplyEmail",
+          "SupplyFullName": "onSupplyFullName",
+          "SupplyFirstName": "onSupplyFirstName",
+          "SupplyLastName": "onSupplyLastName",
+          "SupplyPhoneNumber": "onSupplyPhoneNumber",
+          "SupplyLoremParagraph": "onSupplyLoremParagraph",
+          "SupplyLoremParagraphs": "onSupplyLoremParagraphs"
         }
       }
     }
