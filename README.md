@@ -17,39 +17,40 @@ Sketch Data Faker will help you insert text data into your mockups.
 
 There are 2 ways to use it: Manual and Automatic
 
-- In _manual mode_, you select one of the specific types of data that Sketch Data Faker has available. No setup needed.
-- In automatic mode\_, you can insert one of over 100 types of data, but requires you to rename your text layers.
+- In **manual mode**, you select one of the specific types of data that Sketch Data Faker has available. No setup needed.
+- In **automatic mode**, you can insert one of over 100 types of data, if you rename your text layers in smart ways. (See Below)
 
 ## Installation
 
-To use Sketch Data Faker, first install the plugin by double clicking on it.
-It will become available to you in the native Sketch Data menus just like other types of data.
-You can view more about how to use Sketch's Data feature here: https://sketchapp.com/docs/data/
+- To use Sketch Data Faker, first install the plugin by double clicking on it. You can find the latest version in the Releases tab: https://github.com/paintedbicycle/sketch-data-faker/releases
+- Once installed, data will become available to you in the native Sketch Data menus just like other types of data.
+- You can view more about how to use Sketch's Data features here: https://sketchapp.com/docs/data/
 
 ## Manual Mode
 
-- In **manual mode**, you right-click on the text layer and in the menu go to "Data Feeds >" then "Sketch Data Faker >" and then choose the type of data you want (for example Full Name).
-  The
+- In **manual mode**, you right-click on the text layer and look for the "Data Feeds" option then "Sketch Data Faker >" and then choose the type of data you want (for example Full Name).
+  The layer text will be replaced with whatever type of data you chose. It's linked and is good to go. You can even refresh it to get new data or use it inside symbols with unique data for each symbol.
 
 ## Automatic Mode
 
-- In **automatic mode**, you right click on the layer and go to the same menu, but you choose "Auto (Layer Name)" from the menu.
-  -- You can then re-name your layer with the name of the type of data you want (see the chart below for all the data you can use).
+- In **automatic mode** you **re-name your layer** with the name of the type of data you want (see the chart below for all the data you can use).
+- Then you right click on the layer and go to the same menu, but you choose "Auto (Layer Name)" from the menu this time.
+- You text will be replaced with the new type of data. And will work the same way as manual mode above.
 
 ### Automatic Mode Content
 
-- If you select **Automatic Mode** and have set your layer to use "Auto (Layer Name)" from the _Sketch Data Faker_ menu, you can then rename your layer to insert automatically over 100 types of text data that you can choose from.
-- The chart below has "categories" (i.e "address") and "data types" (i.e. zipCode) and you combine them to make your data
-- To use, you first put the category name and then a "." and then the data type...like: "address.zipCode"
+- Again, if you select **Automatic Mode** and there have set your layer to use "Auto (Layer Name)" from the _Sketch Data Faker_ menu, you must rename your layer properly to insert over 100 types of text data that you can choose from.
+- The chart below has "categories" (i.e "address") and "data types" (i.e. zipCode) and that you can choose from
+- To use the data types you first put the category name followed by a "." followed by the data type...like this: "address.zipCode"
 - Make sure to use the exact spelling and all capitalization!
 
 More examples:
 
-- To insert a US Zip Code, rename your text layer `"address.zipCode"`
-- To insert a Street Name, rename your text layer `"address.streetName"`
-- To insert a Street Name, rename your text layer `"address.streetName"`
-- To insert a Company Name, rename your text layer `"company.companyName"`
-- To insert a Domain Name, rename your text layer `"internet.domainName"`
+- To insert a US Zip Code, rename your text layer `address.zipCode`
+- To insert a Street Name, rename your text layer `address.streetName`
+- To insert a random sentence, rename your text layer `lorem.sentence`
+- To insert a Company Name, rename your text layer `company.companyName`
+- To insert a Domain Name, rename your text layer `internet.domainName`
 
 The plugin currently uses the data from faker.js and you can use most if the data from that source. More data sources may be added in the future.
 
