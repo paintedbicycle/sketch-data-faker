@@ -1,5 +1,13 @@
 # Sketch Data Faker
 
+---
+
+** Please note this plugin is currently in beta testing mode. Things will change and things may break **
+
+Again, this is an **early release** of this plugin and has not been tested fully. Do not use in production mockups. Save and backup your Sketch file regularly. Your Sketch file may crash. You've been warned.
+
+---
+
 Sketch Data Faker will help you insert text data into your mockups.
 
 - You can choose what type of data (Full Name, Email Address, Telephone, Paragraph, etc)
