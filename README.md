@@ -20,22 +20,22 @@ You can view more about how to use Sketch's Data feature here: https://sketchapp
 
 ## Manual Mode
 
-- In _manual mode_, you right-click on the text layer and in the menu go to "Data Feeds >" then "Sketch Data Faker >" and then choose the type of data you want (for example Full Name).
+- In **manual mode**, you right-click on the text layer and in the menu go to "Data Feeds >" then "Sketch Data Faker >" and then choose the type of data you want (for example Full Name).
   The
 
 ## Automatic Mode
 
-- In _automatic mode_, you right click on the layer and go to the same menu, but you choose "Auto (Layer Name)" from the menu.
+- In **automatic mode**, you right click on the layer and go to the same menu, but you choose "Auto (Layer Name)" from the menu.
   -- You can then re-name your layer with the name of the type of data you want (see the chart below for all the data you can use).
 
 ### Automatic Mode Content
 
-- If you select Automatic Mode and have set your later to use "Auto (Layer Name)" from the Sketch Data Faker menu, you can rename your layer to insert automatically over 100 types of text data.
-- The chart below has "categories" (i.e "address") and "data types" (i.e. zipCode)
-- To use, you first put the categoriy name and then a "." and then the data type... like "address.zipCode".
+- If you select **Automatic Mode** and have set your layer to use "Auto (Layer Name)" from the _Sketch Data Faker_ menu, you can then rename your layer to insert automatically over 100 types of text data that you can choose from.
+- The chart below has "categories" (i.e "address") and "data types" (i.e. zipCode) and you combine them to make your data
+- To use, you first put the category name and then a "." and then the data type...like: "address.zipCode"
 - Make sure to use the exact spelling and all capitalization!
 
-For example:
+More examples:
 
 - To insert a US Zip Code, rename your text layer `"address.zipCode"`
 - To insert a Street Name, rename your text layer `"address.streetName"`
@@ -43,7 +43,11 @@ For example:
 - To insert a Company Name, rename your text layer `"company.companyName"`
 - To insert a Domain Name, rename your text layer `"internet.domainName"`
 
+The plugin currently uses the data from faker.js and you can use most if the data from that source. More data sources may be added in the future.
+
 #### Full list here:
+
+You can name your layer any of these below. Remember to first put the category and then the type (as above).
 
 - address
   - zipCode
