@@ -1,7 +1,7 @@
 {
   "name": "sketch-data-faker",
   "version": "0.1.6",
-  "description": "A Sketch data plugin providing data for you mockups from Faker.js",
+  "description": "A Sketch plugin providing realistic (fake) data for your mockups from Faker.js and other sources.",
   "engines": {
     "sketch": ">=3.0"
   },
