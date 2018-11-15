@@ -1,0 +1,36 @@
+{
+  "compatibleVersion": 3,
+  "bundleVersion": 1,
+  "icon": "icon.png",
+  "suppliesData": true,
+  "commands": [
+    {
+      "script": "index.js",
+      "handlers": {
+        "actions": {
+          "Startup": "onStartup",
+          "Shutdown": "onShutdown",
+          "SupplyAutomatically": "onSupplyAutomatically",
+          "SupplyEmail": "onSupplyEmail",
+          "SupplyFullName": "onSupplyFullName",
+          "SupplyFirstName": "onSupplyFirstName",
+          "SupplyLastName": "onSupplyLastName",
+          "SupplyPhoneNumber": "onSupplyPhoneNumber",
+          "SupplyLoremParagraph": "onSupplyLoremParagraph",
+          "SupplyLoremParagraphs": "onSupplyLoremParagraphs"
+        }
+      }
+    }
+  ],
+  "menu": {
+    "title": "Sketch Data Faker"
+  },
+  "version": "0.1.7",
+  "description": "A Sketch plugin providing 100+ types of realistic (fake) data for your mockups from Faker.js and other sources.",
+  "homepage": "https://sketchfaker.com",
+  "name": "Sketch Data Faker",
+  "identifier": "Sketch Data Faker",
+  "disableCocoaScriptPreprocessor": true,
+  "appcast": "https://raw.githubusercontent.com/paintedbicycle/sketch-data-faker/master/.appcast.xml",
+  "author": "Paul Wright"
+}

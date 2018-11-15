@@ -1,5 +1,4 @@
 # build artefacts
-*.sketchplugin
 .vscode
 
 # npm
