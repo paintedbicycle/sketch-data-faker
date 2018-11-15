@@ -7,33 +7,37 @@ Sketch Data Faker will help you insert text data into your mockups.
 - You can refresh it and get another copy of that data randomly re-inserted
 - It works inside Symbols, so one symbol can create several symbols with the random data inserted each time
 
-There are 2 ways to use it: Manual and Automatic
-
-- In **manual mode**, you select one of the specific types of data that Sketch Data Faker has available. No setup needed.
-- In **automatic mode**, you can insert one of over 100 types of data, if you rename your text layers in smart ways. (See Below)
-
 ## Installation
 
-- To use Sketch Data Faker, first install the plugin by double clicking on it. You can find the latest version in the Releases tab: https://github.com/paintedbicycle/sketch-data-faker/releases
+- To use Sketch Data Faker, install the plugin by double-clicking on the `sketch-data-faker.sketchplugin` file.
+
+## How to Use
+
 - Once installed, data will become available to you in the native Sketch Data menus just like other types of data.
 - You can view more about how to use Sketch's Data features here: https://sketchapp.com/docs/data/
 
+There are 2 ways to use it: Manual and Automatic (Recommended)
+
+- In **manual mode**, you select one of the specific pre-built types of data that Sketch Faker has made available in the dropdown menu. No setup/changes to your Sketch file needed.
+- In **automatic mode** (recommended), you can insert much more data - over 100 types of data, by _renaming your text layer_ using the chart below.
+
 ## Manual Mode
 
-- In **manual mode**, you right-click on the text layer and look for the "Data Feeds" option then "Sketch Data Faker >" and then choose the type of data you want (for example Full Name).
-  The layer text will be replaced with whatever type of data you chose. It's linked and is good to go. You can even refresh it to get new data or use it inside symbols with unique data for each symbol.
+- To use **manual mode**, right-click on the text layer and look "Sketch Data Faker" menu in the "Data Feeds" menu. Then choose the type of data you want to insert. For example `Full Name`. Your layer will now be replaced with a random Full Name.
+- The layer text will be replaced with whatever type of data you chose. It's now linked up and is good to go. You can even refresh it to get different data of the same type or use it inside symbols with unique data for each symbol.
 
-## Automatic Mode
+## Automatic Mode (Recommended)
 
-- In **automatic mode** you **re-name your layer** with the name of the type of data you want (see the chart below for all the data you can use).
-- Then you right click on the layer and go to the same menu, but you choose "Auto (Layer Name)" from the menu this time.
-- You text will be replaced with the new type of data. And will work the same way as manual mode above.
+- In **automatic mode** you **re-name your layer** with the type of data you want (see the chart below for all the data types you can use).
+- When you right click on the layer and go to the same menu as above, but you choose the "Auto (Layer Name)" option from the menu this time.
+- Your layer text will be replaced with random data of whatever type you changed your layer name to
+- The rest will work the same way as manual mode above.
 
-### Automatic Mode Content
+### Automatic Mode Content Types
 
 - Again, if you select **Automatic Mode** and there have set your layer to use "Auto (Layer Name)" from the _Sketch Data Faker_ menu, you must rename your layer properly to insert over 100 types of text data that you can choose from.
-- The chart below has "categories" (i.e "address") and "data types" (i.e. zipCode) and that you can choose from
-- To use the data types you first put the category name followed by a "." followed by the data type...like this: "address.zipCode"
+- The chart below has the data types (i.e. zipCode) and that you can choose from
+- To use the data types you first put the category name followed by followed by the data type with a dot (".") in between. For example: `address.zipCode` will give you have a US zip code.
 - Make sure to use the exact spelling and all capitalization!
 
 More examples:
@@ -43,12 +47,11 @@ More examples:
 - To insert a random sentence, rename your text layer `lorem.sentence`
 - To insert a Company Name, rename your text layer `company.companyName`
 - To insert a Domain Name, rename your text layer `internet.domainName`
-
-The plugin currently uses the data from faker.js and you can use most if the data from that source. More data sources may be added in the future.
+- There are words, colours, cities, states, prices, product names, verbs, adjectives, catch phrases, buzzwords, and more.
 
 #### Full list here:
 
-You can name your layer any of these below. Remember to first put the category and then the type (as above).
+You can name your layer any of these below. Remember to first put the category and then the type (i.e. `address.city`, not just `city`).
 
 - address
   - zipCode
