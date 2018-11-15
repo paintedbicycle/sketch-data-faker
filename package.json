@@ -6,6 +6,7 @@
     "sketch": ">=3.0"
   },
   "author": "Paul Wright",
+  "homepage": "https://sketchfaker.com",
   "identifier": "com.paintedbicycle.sketch.sketchfaker",
   "appcast": "https://raw.githubusercontent.com/paintedbicycle/sketch-data-faker/master/.appcast.xml",
   "icon": "icon.png",
