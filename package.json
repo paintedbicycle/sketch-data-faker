@@ -1,10 +1,13 @@
 {
   "name": "sketch-data-faker",
   "version": "0.1.7",
-  "description": "A Sketch plugin providing realistic (fake) data for your mockups from Faker.js and other sources.",
+  "description": "A Sketch plugin providing 100+ types of realistic (fake) data for your mockups from Faker.js and other sources.",
   "engines": {
     "sketch": ">=3.0"
   },
+  "author": "Paul Wright",
+  "identifier": "com.paintedbicycle.sketch.sketchfaker",
+  "appcast": "https://raw.githubusercontent.com/paintedbicycle/sketch-data-faker/master/.appcast.xml",
   "skpm": {
     "name": "Sketch Data Faker",
     "manifest": "src/manifest.json",
