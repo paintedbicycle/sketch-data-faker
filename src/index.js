@@ -80,78 +80,74 @@ export function onSupplyLoremParagraphs(context) {
 function supplyFakerData(context, type) {
   let dataKey = context.data.key;
   let document = require('sketch/dom').getSelectedDocument();
-  console.log('context.data', context.data);
   const items = util.toArray(context.data.items).map(sketch.fromNative);
   let errors = [];
 
   items.forEach((item, index) => {
-    let data = null;
+    let newLayerData = null;
     let custom = false;
-    let layerError;
-    let originalLayerName = item.name;
-    console.log('item', item);
+    let layerError = false;
+
+    // In order to work in both layers and symbols we grab the original
+    // layer by getting the id from either the override or the layer
+    let layer = document.getLayerWithID(
+      item.override ? item.override.path : item.id
+    );
+    let originalLayerName = layer.name;
+    let searchTerm = '{{' + layer.name + '}}';
 
     switch (type) {
       case 'fullName':
-        data = faker.name.findName();
+        newLayerData = faker.name.findName();
         break;
       case 'firstName':
-        data = faker.name.firstName();
+        newLayerData = faker.name.firstName();
         break;
       case 'lastName':
-        data = faker.name.lastName();
+        newLayerData = faker.name.lastName();
         break;
       case 'email':
-        data = faker.internet.email();
+        newLayerData = faker.internet.email();
         break;
       case 'phoneNumber':
-        data = faker.phone.phoneNumber();
+        newLayerData = faker.phone.phoneNumber();
         break;
       case 'loremParagraph':
-        data = faker.lorem.paragraph();
+        newLayerData = faker.lorem.paragraph();
         break;
       case 'loremParagraphs':
-        data = faker.lorem.paragraphs();
+        newLayerData = faker.lorem.paragraphs();
         break;
       default:
         // Set custom to true so we can override layer name
         custom = true;
         try {
-          data = faker.fake('{{' + item.name + '}}');
+          newLayerData = faker.fake(searchTerm);
         } catch (e) {
           layerError = true;
           errors.push({
             type: 'noData',
             layer: {
-              name: originalLayerName
+              name: layer.name
             }
           });
         }
         break;
     }
-    console.log('data', data);
-    console.log('originalLayerName', originalLayerName);
 
     // If this specific layer has an error, do not continue
     if (layerError) return;
 
     // Replace the layer text
-    DataSupplier.supplyDataAtIndex(dataKey, data, index);
+    DataSupplier.supplyDataAtIndex(dataKey, newLayerData, index);
 
-    // To ensure we don't override the layer name
-    if (custom === 'bob') {
-      console.log('custom', custom);
-      let layer = document.getLayerWithID(item.id);
-      console.log('layer', layer);
-      if (layer) {
-        // We now save the old layer name back
-        layer.name = originalLayerName;
-      }
+    // The DataSupplier method above overrites the layer name
+    // So we now put the original layer name back again
+    if (custom === true) {
+      layer.name = originalLayerName;
     }
   });
 
-  console.log('errors:', errors);
-  console.log('length:', errors.length);
   if (errors.length === 1) {
     UI.alert(
       'Sketch Data Faker Error',
