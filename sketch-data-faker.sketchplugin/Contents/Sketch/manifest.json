@@ -25,7 +25,7 @@
   "menu": {
     "title": "Sketch Data Faker"
   },
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "A Sketch plugin providing 100+ types of realistic (fake) data for your mockups from Faker.js and other sources.",
   "homepage": "https://sketchfaker.com",
   "name": "Sketch Data Faker",

@@ -94575,64 +94575,87 @@ function supplyFakerData(context, type) {
   var document = __webpack_require__(/*! sketch/dom */ "sketch/dom").getSelectedDocument();
 
   var items = util.toArray(context.data.items).map(sketch.fromNative);
+  var errors = [];
   items.forEach(function (item, index) {
-    var data;
-    var custom;
-    var originalLayerName = item.name;
+    var newLayerData = null;
+    var custom = false;
+    var layerError = false; // In order to work in both layers and symbols we grab the original
+    // layer by getting the id from either the override or the layer
 
-    try {
-      switch (type) {
-        case 'fullName':
-          data = faker.name.findName();
-          break;
+    var layer = document.getLayerWithID(item.override ? item.override.path : item.id);
+    var originalLayerName = layer.name;
+    var searchTerm = '{{' + layer.name + '}}';
 
-        case 'firstName':
-          data = faker.name.firstName();
-          break;
+    switch (type) {
+      case 'fullName':
+        newLayerData = faker.name.findName();
+        break;
 
-        case 'lastName':
-          data = faker.name.lastName();
-          break;
+      case 'firstName':
+        newLayerData = faker.name.firstName();
+        break;
 
-        case 'email':
-          data = faker.internet.email();
-          break;
+      case 'lastName':
+        newLayerData = faker.name.lastName();
+        break;
 
-        case 'phoneNumber':
-          data = faker.phone.phoneNumber();
-          break;
+      case 'email':
+        newLayerData = faker.internet.email();
+        break;
 
-        case 'loremParagraph':
-          data = faker.lorem.paragraph();
-          break;
+      case 'phoneNumber':
+        newLayerData = faker.phone.phoneNumber();
+        break;
 
-        case 'loremParagraphs':
-          data = faker.lorem.paragraphs();
-          break;
+      case 'loremParagraph':
+        newLayerData = faker.lorem.paragraph();
+        break;
 
-        default:
-          // Set custom to true so we can override layer name
-          custom = true;
-          data = faker.fake('{{' + item.name + '}}');
-          console.log('data', data);
-          break;
-      } // Replace the layer text
+      case 'loremParagraphs':
+        newLayerData = faker.lorem.paragraphs();
+        break;
 
+      default:
+        // Set custom to true so we can override layer name
+        custom = true;
 
-      DataSupplier.supplyDataAtIndex(dataKey, data, index); // To ensure we don't override the layer name
-
-      if (custom === true) {
-        var layer = document.getLayerWithID(item.id);
-
-        if (layer) {
-          // We now save the old layer name back
-          layer.name = originalLayerName;
+        try {
+          newLayerData = faker.fake(searchTerm);
+        } catch (e) {
+          layerError = true;
+          errors.push({
+            type: 'noData',
+            layer: {
+              name: layer.name
+            }
+          });
         }
-      }
-    } catch (e) {
-      UI.alert('Invalid Layer Name', 'A layer named "' + originalLayerName + '" returned no data. \n\nPlease double-check the layer name matches one of the data types.');
+
+        break;
+    } // If this specific layer has an error, do not continue
+
+
+    if (layerError) return; // Replace the layer text
+
+    DataSupplier.supplyDataAtIndex(dataKey, newLayerData, index); // The DataSupplier method above overrites the layer name
+    // So we now put the original layer name back again
+
+    if (custom === true) {
+      layer.name = originalLayerName;
     }
   });
+
+  if (errors.length === 1) {
+    UI.alert('Sketch Data Faker Error', 'A layer named "' + errors[0].layer.name + '" returned no data. \n\nPlease double-check the layer name matches one of the data types.');
+  } else if (errors.length > 1) {
+    var stringError = function stringError() {
+      return errors.map(function (error) {
+        return error.layer.name;
+      }).join('\n');
+    };
+
+    UI.alert('Sketch Data Faker Error', "There were some layers that returned no data. \n\nPlease double-check that the following layer names match one of the data types:\n\n".concat(stringError()));
+  }
 }
 
 /***/ }),
