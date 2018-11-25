@@ -20,9 +20,16 @@
           "SupplyLoremParagraphs": "onSupplyLoremParagraphs"
         }
       }
+    },
+    {
+      "name": "Rename Layer",
+      "identifier": "rename-layer",
+      "handler": "onChangeLayerName",
+      "script": "index.js"
     }
   ],
   "menu": {
-    "title": "Sketch Data Faker"
+    "title": "Sketch Data Faker",
+    "items": ["rename-layer"]
   }
 }
