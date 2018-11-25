@@ -55,7 +55,7 @@ You can name your layer any of these below. Remember to first put the category a
 
 ## Address Data
 
-| Data Type         | Layer Name                 | Example Data             | Data Type | Data Source |
+| Name              | Layer Name                 | Example Data             | Data Type | Data Source |
 | ----------------- | -------------------------- | ------------------------ | --------- | ----------- |
 | US ZipCpde        | `address.zipCode`          | "90210"                  | Text      | Faker.js    |
 | City              | `address.city`             | "East Zelmatown"         | Text      | Faker.js    |
@@ -76,7 +76,7 @@ You can name your layer any of these below. Remember to first put the category a
 
 ## Commerce
 
-| Data Type         | Layer Name                  | Example Data               | Data Type | Data Source |
+| Name              | Layer Name                  | Example Data               | Data Type | Data Source |
 | ----------------- | --------------------------- | -------------------------- | --------- | ----------- |
 | Colo(u)r          | `commerce.color`            | "mint green", "gold"       | Text      | Faker.js    |
 | Department        | `commerce.department`       | "Shoes", "Tools", "Beauty" | Text      | Faker.js    |
@@ -88,7 +88,7 @@ You can name your layer any of these below. Remember to first put the category a
 
 ## Company
 
-| Data Type        | Layer Name                      | Example Data                           | Data Type | Data Source |
+| Name             | Layer Name                      | Example Data                           | Data Type | Data Source |
 | ---------------- | ------------------------------- | -------------------------------------- | --------- | ----------- |
 | Company Suffixes | `company.suffixes`              | "Inc,and Sons,LLC,Group"               | Text      | Faker.js    |
 | Company Name     | `company.companyName`           | "Harvey Group"                         | Text      | Faker.js    |
@@ -104,7 +104,7 @@ You can name your layer any of these below. Remember to first put the category a
 
 ## Database
 
-| Data Type          | Layer Name           | Example Data                  | Data Type | Data Source |
+| Name               | Layer Name           | Example Data                  | Data Type | Data Source |
 | ------------------ | -------------------- | ----------------------------- | --------- | ----------- |
 | Database Column    | `database.column`    | "createdAt", "category"       | Text      | Faker.js    |
 | Database Type      | `database.type`      | "boolean", "tinyint", "time"  | Text      | Faker.js    |
@@ -113,7 +113,7 @@ You can name your layer any of these below. Remember to first put the category a
 
 ## Date
 
-| Data Type        | Layer Name     | Example Data                              | Data Type | Data Source |
+| Name             | Layer Name     | Example Data                              | Data Type | Data Source |
 | ---------------- | -------------- | ----------------------------------------- | --------- | ----------- |
 | Past Full Date   | `date.past`    | "Sun Feb 18 2018 11:12:04 GMT+0100 (CET)" | Text      | Faker.js    |
 | Future Full Date | `date.future`  | "Thu Jan 17 2020 04:00:24 GMT+0100 (CET)" | Text      | Faker.js    |
@@ -123,7 +123,7 @@ You can name your layer any of these below. Remember to first put the category a
 
 ## Finance
 
-| Data Type        | Layer Name                | Example Data                    | Data Type | Data Source |
+| Name             | Layer Name                | Example Data                    | Data Type | Data Source |
 | ---------------- | ------------------------- | ------------------------------- | --------- | ----------- |
 | Account          | `finance.account`         | "54352123"                      | Text      | Faker.js    |
 | Account Name     | `finance.accountName`     | "Savings Account"               | Text      | Faker.js    |
@@ -139,7 +139,7 @@ You can name your layer any of these below. Remember to first put the category a
 
 ## Computer
 
-| Data Type     | Layer Name            | Example Data                                                    | Data Type | Data Source |
+| Name          | Layer Name            | Example Data                                                    | Data Type | Data Source |
 | ------------- | --------------------- | --------------------------------------------------------------- | --------- | ----------- |
 | Abbreviation  | `hacker.abbreviation` | "FTP", "RAM", "SQL"                                             | Text      | Faker.js    |
 | Adjective     | `hacker.adjective`    | "solid state", "back-end"                                       | Text      | Faker.js    |
@@ -150,7 +150,7 @@ You can name your layer any of these below. Remember to first put the category a
 
 ## Internet
 
-| Data Type      | Layer Name              | Example Data                                                      | Data Type | Data Source |
+| Name           | Layer Name              | Example Data                                                      | Data Type | Data Source |
 | -------------- | ----------------------- | ----------------------------------------------------------------- | --------- | ----------- |
 | Email          | `internet.email`        | "Keira48@yahoo.com"                                               | Text      | Faker.js    |
 | @example Email | `internet.exampleEmail` | "Avis_Conn54@example.org"                                         | Text      | Faker.js    |
@@ -169,7 +169,7 @@ You can name your layer any of these below. Remember to first put the category a
 
 ## Lorem
 
-| Data Type  | Layer Name         | Example Data                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Data Type | Data Source |
+| Name       | Layer Name         | Example Data                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Data Type | Data Source |
 | ---------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------- | ----------- |
 | Word       | `lorem.word`       | "rerum"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Text      | Faker.js    |
 | Words      | `lorem.words`      | "sed sapiente rerum"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Text      | Faker.js    |
@@ -183,7 +183,7 @@ You can name your layer any of these below. Remember to first put the category a
 
 ## Name
 
-| Data Type      | Layer Name           | Example Data                | Data Type | Data Source |
+| Name           | Layer Name           | Example Data                | Data Type | Data Source |
 | -------------- | -------------------- | --------------------------- | --------- | ----------- |
 | First Name     | `name.firstName`     | "Jakayla", "Sally"          | Text      | Faker.js    |
 | Last Name      | `name.lastName`      | "Pollich", "Schuppe"        | Text      | Faker.js    |
@@ -198,7 +198,7 @@ You can name your layer any of these below. Remember to first put the category a
 
 ## Phone
 
-| Data Type                  | Layer Name                | Example Data                           | Data Type | Data Source |
+| Name                       | Layer Name                | Example Data                           | Data Type | Data Source |
 | -------------------------- | ------------------------- | -------------------------------------- | --------- | ----------- |
 | Phone Number               | `phone.phoneNumber`       | "226.634.3129 x7019"                   | Text      | Faker.js    |
 | North America Phone Number | `phone.phoneNumberFormat` | "994-651-4933"                         | Text      | Faker.js    |
@@ -206,7 +206,7 @@ You can name your layer any of these below. Remember to first put the category a
 
 ## Random
 
-| Data Type               | Layer Name            | Example Data                                 | Data Type | Data Source |
+| Name                    | Layer Name            | Example Data                                 | Data Type | Data Source |
 | ----------------------- | --------------------- | -------------------------------------------- | --------- | ----------- |
 | Random Number           | `random.number`       | "49109"                                      | Text      | Faker.js    |
 | uuid                    | `random.uuid`         | "f41c75fd-c540-4727-b5df-db7ead603a83"       | Text      | Faker.js    |
@@ -218,7 +218,7 @@ You can name your layer any of these below. Remember to first put the category a
 
 ## Computer System
 
-| Data Type        | Layer Name              | Example Data                        | Data Type | Data Source |
+| Name             | Layer Name              | Example Data                        | Data Type | Data Source |
 | ---------------- | ----------------------- | ----------------------------------- | --------- | ----------- |
 | File Name        | `system.fileName`       | "planner_ftp_bedfordshire.u32"      | Text      | Faker.js    |
 | Common File Name | `system.commonFileName` | "back_end_3rd_generation_chief.mp4" | Text      | Faker.js    |
