@@ -2,16 +2,15 @@ const sketch = require('sketch');
 const { DataSupplier } = sketch;
 const util = require('util');
 const faker = require('faker');
-const UI = require('sketch/ui');
 
 import config from './config';
-import { googleAnalytics } from './utilities';
+import { showUserErrors, googleAnalytics } from './utilities';
 
 let debugMode = config.debug;
 
 export function supplyFakerData(context, type) {
   let dataKey = context.data.key;
-  let document = require('sketch/dom').getSelectedDocument();
+  const document = sketch.getSelectedDocument();
   const items = util.toArray(context.data.items).map(sketch.fromNative);
   let errors = [];
 
@@ -87,41 +86,19 @@ export function supplyFakerData(context, type) {
         break;
     }
 
-    // If this specific layer has an error, do not continue
+    // If this specific layer has an error, go to next layer
     if (layerError) return;
 
     // Replace the layer text
     DataSupplier.supplyDataAtIndex(dataKey, newLayerData, index);
 
-    // The DataSupplier method above overites the layer name
-    // So we now put the original layer name back again
+    // The DataSupplier method above overwrites the layer name
+    // so we now put the original layer name back again so the next
+    // time the user runs our plugin, the name is correct
     if (custom === true) {
       layer.name = originalLayerName;
     }
   });
 
-  if (errors.length === 1) {
-    UI.alert(
-      'Sketch Data Faker Error',
-      'A layer named "' +
-        errors[0].layer.name +
-        '" returned no data. \n\nPlease double-check the layer name matches one of the data types.'
-    );
-    if (!debugMode)
-      googleAnalytics(context, 'Error', 'Faker', error[0].layer.name);
-  } else if (errors.length > 1) {
-    function stringError() {
-      return errors
-        .map(error => {
-          if (!debugMode)
-            googleAnalytics(context, 'Error', 'Faker', error.layer.name);
-          return error.layer.name;
-        })
-        .join('\n');
-    }
-    UI.alert(
-      'Sketch Data Faker Error',
-      `There were some layers that returned no data. \n\nPlease double-check that the following layer names match one of the data types:\n\n${stringError()}`
-    );
-  }
+  if (errors) showUserErrors(errors);
 }

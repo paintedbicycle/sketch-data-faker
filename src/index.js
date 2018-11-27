@@ -2,9 +2,9 @@ const sketch = require('sketch');
 const { DataSupplier } = sketch;
 
 import { supplyFakerData } from './faker';
+import { changeLayerName, showUserErrors } from './utilities';
 
 export function onStartup() {
-  // To register the plugin, uncomment the relevant type:
   DataSupplier.registerDataSupplier(
     'public.text',
     'Full Name',
@@ -48,7 +48,6 @@ export function onStartup() {
 }
 
 export function onShutdown() {
-  // Deregister the plugin
   DataSupplier.deregisterDataSuppliers();
 }
 
@@ -75,4 +74,13 @@ export function onSupplyLoremParagraph(context) {
 }
 export function onSupplyLoremParagraphs(context) {
   supplyFakerData(context, 'loremParagraphs');
+}
+
+export function setLayerNameAndData(context) {
+  try {
+    let identifier = String(__command.identifier());
+    changeLayerName(identifier);
+  } catch (error) {
+    showUserErrors(error);
+  }
 }

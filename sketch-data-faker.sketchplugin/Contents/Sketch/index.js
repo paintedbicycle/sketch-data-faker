@@ -94500,25 +94500,34 @@ exports.generate = function generate() {
 
 /***/ }),
 
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
-/*! exports provided: onStartup, onShutdown, onSupplyAutomatically, onSupplyFullName, onSupplyFirstName, onSupplyLastName, onSupplyEmail, onSupplyPhoneNumber, onSupplyLoremParagraph, onSupplyLoremParagraphs */
+/***/ "./src/config.js":
+/*!***********************!*\
+  !*** ./src/config.js ***!
+  \***********************/
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "onStartup", function() { return onStartup; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "onShutdown", function() { return onShutdown; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "onSupplyAutomatically", function() { return onSupplyAutomatically; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "onSupplyFullName", function() { return onSupplyFullName; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "onSupplyFirstName", function() { return onSupplyFirstName; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "onSupplyLastName", function() { return onSupplyLastName; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "onSupplyEmail", function() { return onSupplyEmail; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "onSupplyPhoneNumber", function() { return onSupplyPhoneNumber; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "onSupplyLoremParagraph", function() { return onSupplyLoremParagraph; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "onSupplyLoremParagraphs", function() { return onSupplyLoremParagraphs; });
+var config = {
+  debug: false
+};
+/* harmony default export */ __webpack_exports__["default"] = (config);
+
+/***/ }),
+
+/***/ "./src/faker.js":
+/*!**********************!*\
+  !*** ./src/faker.js ***!
+  \**********************/
+/*! exports provided: supplyFakerData */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "supplyFakerData", function() { return supplyFakerData; });
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./config */ "./src/config.js");
+/* harmony import */ var _utilities__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utilities */ "./src/utilities.js");
 var sketch = __webpack_require__(/*! sketch */ "sketch");
 
 var DataSupplier = sketch.DataSupplier;
@@ -94527,53 +94536,12 @@ var util = __webpack_require__(/*! util */ "util");
 
 var faker = __webpack_require__(/*! faker */ "./node_modules/faker/index.js");
 
-var UI = __webpack_require__(/*! sketch/ui */ "sketch/ui");
 
-function onStartup() {
-  // To register the plugin, uncomment the relevant type:
-  DataSupplier.registerDataSupplier('public.text', 'Full Name', 'SupplyFullName');
-  DataSupplier.registerDataSupplier('public.text', 'First Name', 'SupplyFirstName');
-  DataSupplier.registerDataSupplier('public.text', 'Last Name', 'SupplyLastName');
-  DataSupplier.registerDataSupplier('public.text', 'Email Address', 'SupplyEmail');
-  DataSupplier.registerDataSupplier('public.text', 'Phone Number', 'SupplyPhoneNumber');
-  DataSupplier.registerDataSupplier('public.text', 'Lorem Paragraph', 'SupplyLoremParagraph');
-  DataSupplier.registerDataSupplier('public.text', 'Lorem Paragraphs', 'SupplyLoremParagraphs');
-  DataSupplier.registerDataSupplier('public.text', 'Auto (Layer Name)', 'SupplyAutomatically');
-}
-function onShutdown() {
-  // Deregister the plugin
-  DataSupplier.deregisterDataSuppliers();
-}
-function onSupplyAutomatically(context) {
-  supplyFakerData(context);
-}
-function onSupplyFullName(context) {
-  supplyFakerData(context, 'fullName');
-}
-function onSupplyFirstName(context) {
-  supplyFakerData(context, 'firstName');
-}
-function onSupplyLastName(context) {
-  supplyFakerData(context, 'lastName');
-}
-function onSupplyEmail(context) {
-  supplyFakerData(context, 'email');
-}
-function onSupplyPhoneNumber(context) {
-  supplyFakerData(context, 'phoneNumber');
-}
-function onSupplyLoremParagraph(context) {
-  supplyFakerData(context, 'loremParagraph');
-}
-function onSupplyLoremParagraphs(context) {
-  supplyFakerData(context, 'loremParagraphs');
-}
 
+var debugMode = _config__WEBPACK_IMPORTED_MODULE_0__["default"].debug;
 function supplyFakerData(context, type) {
   var dataKey = context.data.key;
-
-  var document = __webpack_require__(/*! sketch/dom */ "sketch/dom").getSelectedDocument();
-
+  var document = sketch.getSelectedDocument();
   var items = util.toArray(context.data.items).map(sketch.fromNative);
   var errors = [];
   items.forEach(function (item, index) {
@@ -94589,30 +94557,37 @@ function supplyFakerData(context, type) {
     switch (type) {
       case 'fullName':
         newLayerData = faker.name.findName();
+        if (!debugMode) Object(_utilities__WEBPACK_IMPORTED_MODULE_1__["googleAnalytics"])(context, 'Get Data', 'Faker', 'Full Name');
         break;
 
       case 'firstName':
         newLayerData = faker.name.firstName();
+        if (!debugMode) Object(_utilities__WEBPACK_IMPORTED_MODULE_1__["googleAnalytics"])(context, 'Get Data', 'Faker', 'First Name');
         break;
 
       case 'lastName':
         newLayerData = faker.name.lastName();
+        if (!debugMode) Object(_utilities__WEBPACK_IMPORTED_MODULE_1__["googleAnalytics"])(context, 'Get Data', 'Faker', 'Last Name');
         break;
 
       case 'email':
         newLayerData = faker.internet.email();
+        if (!debugMode) Object(_utilities__WEBPACK_IMPORTED_MODULE_1__["googleAnalytics"])(context, 'Get Data', 'Faker', 'Email');
         break;
 
       case 'phoneNumber':
         newLayerData = faker.phone.phoneNumber();
+        if (!debugMode) Object(_utilities__WEBPACK_IMPORTED_MODULE_1__["googleAnalytics"])(context, 'Get Data', 'Faker', 'Phone Number');
         break;
 
       case 'loremParagraph':
         newLayerData = faker.lorem.paragraph();
+        if (!debugMode) Object(_utilities__WEBPACK_IMPORTED_MODULE_1__["googleAnalytics"])(context, 'Get Data', 'Faker', 'Paragraph');
         break;
 
       case 'loremParagraphs':
         newLayerData = faker.lorem.paragraphs();
+        if (!debugMode) Object(_utilities__WEBPACK_IMPORTED_MODULE_1__["googleAnalytics"])(context, 'Get Data', 'Faker', 'Paragraphs');
         break;
 
       default:
@@ -94621,6 +94596,7 @@ function supplyFakerData(context, type) {
 
         try {
           newLayerData = faker.fake(searchTerm);
+          if (!debugMode) Object(_utilities__WEBPACK_IMPORTED_MODULE_1__["googleAnalytics"])(context, 'Get Data', 'Faker Auto', originalLayerName);
         } catch (e) {
           layerError = true;
           errors.push({
@@ -94632,30 +94608,197 @@ function supplyFakerData(context, type) {
         }
 
         break;
-    } // If this specific layer has an error, do not continue
+    } // If this specific layer has an error, go to next layer
 
 
     if (layerError) return; // Replace the layer text
 
-    DataSupplier.supplyDataAtIndex(dataKey, newLayerData, index); // The DataSupplier method above overrites the layer name
-    // So we now put the original layer name back again
+    DataSupplier.supplyDataAtIndex(dataKey, newLayerData, index); // The DataSupplier method above overwrites the layer name
+    // so we now put the original layer name back again so the next
+    // time the user runs our plugin, the name is correct
 
     if (custom === true) {
       layer.name = originalLayerName;
     }
   });
+  if (errors) Object(_utilities__WEBPACK_IMPORTED_MODULE_1__["showUserErrors"])(errors);
+}
 
+/***/ }),
+
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/*! exports provided: onStartup, onShutdown, onSupplyAutomatically, onSupplyFullName, onSupplyFirstName, onSupplyLastName, onSupplyEmail, onSupplyPhoneNumber, onSupplyLoremParagraph, onSupplyLoremParagraphs, setLayerNameAndData */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "onStartup", function() { return onStartup; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "onShutdown", function() { return onShutdown; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "onSupplyAutomatically", function() { return onSupplyAutomatically; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "onSupplyFullName", function() { return onSupplyFullName; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "onSupplyFirstName", function() { return onSupplyFirstName; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "onSupplyLastName", function() { return onSupplyLastName; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "onSupplyEmail", function() { return onSupplyEmail; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "onSupplyPhoneNumber", function() { return onSupplyPhoneNumber; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "onSupplyLoremParagraph", function() { return onSupplyLoremParagraph; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "onSupplyLoremParagraphs", function() { return onSupplyLoremParagraphs; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setLayerNameAndData", function() { return setLayerNameAndData; });
+/* harmony import */ var _faker__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./faker */ "./src/faker.js");
+/* harmony import */ var _utilities__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utilities */ "./src/utilities.js");
+var sketch = __webpack_require__(/*! sketch */ "sketch");
+
+var DataSupplier = sketch.DataSupplier;
+
+
+function onStartup() {
+  DataSupplier.registerDataSupplier('public.text', 'Full Name', 'SupplyFullName');
+  DataSupplier.registerDataSupplier('public.text', 'First Name', 'SupplyFirstName');
+  DataSupplier.registerDataSupplier('public.text', 'Last Name', 'SupplyLastName');
+  DataSupplier.registerDataSupplier('public.text', 'Email Address', 'SupplyEmail');
+  DataSupplier.registerDataSupplier('public.text', 'Phone Number', 'SupplyPhoneNumber');
+  DataSupplier.registerDataSupplier('public.text', 'Lorem Paragraph', 'SupplyLoremParagraph');
+  DataSupplier.registerDataSupplier('public.text', 'Lorem Paragraphs', 'SupplyLoremParagraphs');
+  DataSupplier.registerDataSupplier('public.text', 'Auto (Layer Name)', 'SupplyAutomatically');
+}
+function onShutdown() {
+  DataSupplier.deregisterDataSuppliers();
+}
+function onSupplyAutomatically(context) {
+  Object(_faker__WEBPACK_IMPORTED_MODULE_0__["supplyFakerData"])(context);
+}
+function onSupplyFullName(context) {
+  Object(_faker__WEBPACK_IMPORTED_MODULE_0__["supplyFakerData"])(context, 'fullName');
+}
+function onSupplyFirstName(context) {
+  Object(_faker__WEBPACK_IMPORTED_MODULE_0__["supplyFakerData"])(context, 'firstName');
+}
+function onSupplyLastName(context) {
+  Object(_faker__WEBPACK_IMPORTED_MODULE_0__["supplyFakerData"])(context, 'lastName');
+}
+function onSupplyEmail(context) {
+  Object(_faker__WEBPACK_IMPORTED_MODULE_0__["supplyFakerData"])(context, 'email');
+}
+function onSupplyPhoneNumber(context) {
+  Object(_faker__WEBPACK_IMPORTED_MODULE_0__["supplyFakerData"])(context, 'phoneNumber');
+}
+function onSupplyLoremParagraph(context) {
+  Object(_faker__WEBPACK_IMPORTED_MODULE_0__["supplyFakerData"])(context, 'loremParagraph');
+}
+function onSupplyLoremParagraphs(context) {
+  Object(_faker__WEBPACK_IMPORTED_MODULE_0__["supplyFakerData"])(context, 'loremParagraphs');
+}
+function setLayerNameAndData(context) {
+  try {
+    var identifier = String(__command.identifier());
+    Object(_utilities__WEBPACK_IMPORTED_MODULE_1__["changeLayerName"])(identifier);
+  } catch (error) {
+    Object(_utilities__WEBPACK_IMPORTED_MODULE_1__["showUserErrors"])(error);
+  }
+}
+
+/***/ }),
+
+/***/ "./src/utilities.js":
+/*!**************************!*\
+  !*** ./src/utilities.js ***!
+  \**************************/
+/*! exports provided: changeLayerName, showUserErrors, googleAnalytics */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "changeLayerName", function() { return changeLayerName; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showUserErrors", function() { return showUserErrors; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "googleAnalytics", function() { return googleAnalytics; });
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./config */ "./src/config.js");
+var sketch = __webpack_require__(/*! sketch */ "sketch");
+
+var UI = __webpack_require__(/*! sketch/ui */ "sketch/ui");
+
+
+var debugMode = _config__WEBPACK_IMPORTED_MODULE_0__["default"].debug;
+function changeLayerName(newLayerName) {
+  var document = sketch.getSelectedDocument();
+  var selectedLayers = document.selectedLayers;
+  var errors = [];
+
+  try {
+    if (selectedLayers.length === 0) {
+      UI.message('No layers are selected.'); //errors.push('No layers are selected.');
+    } else {
+      //    console.log('Layers', selectedLayers);
+      selectedLayers.forEach(function (selectedLayer) {
+        var layer = document.getLayerWithID(selectedLayer.override ? selectedLayer.override.path : selectedLayer.id);
+        layer.name = newLayerName;
+      });
+    }
+  } catch (error) {
+    errors.push(error);
+  }
+
+  if (errors) showUserErrors(errors);
+}
+function showUserErrors(errors) {
   if (errors.length === 1) {
     UI.alert('Sketch Data Faker Error', 'A layer named "' + errors[0].layer.name + '" returned no data. \n\nPlease double-check the layer name matches one of the data types.');
+    if (!debugMode) googleAnalytics(context, 'Error', 'Faker', error[0].layer.name);
   } else if (errors.length > 1) {
     var stringError = function stringError() {
       return errors.map(function (error) {
+        if (!debugMode) googleAnalytics(context, 'Error', 'Faker', error.layer.name);
         return error.layer.name;
       }).join('\n');
     };
 
     UI.alert('Sketch Data Faker Error', "There were some layers that returned no data. \n\nPlease double-check that the following layer names match one of the data types:\n\n".concat(stringError()));
   }
+}
+function googleAnalytics(context, category, action, label, value) {
+  var trackingID = 'UA-129789160-1',
+      uuidKey = 'google.analytics.uuid',
+      uuid = NSUserDefaults.standardUserDefaults().objectForKey(uuidKey);
+
+  if (!uuid) {
+    uuid = NSUUID.UUID().UUIDString();
+    NSUserDefaults.standardUserDefaults().setObject_forKey(uuid, uuidKey);
+  }
+
+  var url = 'https://www.google-analytics.com/collect?v=1'; // Tracking ID
+
+  url += '&tid=' + trackingID; // Source
+
+  url += '&ds=sketch' + MSApplicationMetadata.metadata().appVersion; // Client ID
+
+  url += '&cid=' + uuid; // pageview, screenview, event, transaction, item, social, exception, timing
+
+  url += '&t=event'; // App Name
+
+  url += '&an=' + encodeURI(context.plugin.name()); // App ID
+
+  url += '&aid=' + context.plugin.identifier(); // App Version
+
+  url += '&av=' + context.plugin.version(); // Event category
+
+  url += '&ec=' + encodeURI(category); // Event action
+
+  url += '&ea=' + encodeURI(action); // Event label
+
+  if (label) {
+    url += '&el=' + encodeURI(label);
+  } // Event value
+
+
+  if (value) {
+    url += '&ev=' + encodeURI(value);
+  }
+
+  console.log('url', url);
+  var session = NSURLSession.sharedSession(),
+      task = session.dataTaskWithURL(NSURL.URLWithString(NSString.stringWithString(url)));
+  task.resume();
 }
 
 /***/ }),
@@ -94668,17 +94811,6 @@ function supplyFakerData(context, type) {
 /***/ (function(module, exports) {
 
 module.exports = require("sketch");
-
-/***/ }),
-
-/***/ "sketch/dom":
-/*!*****************************!*\
-  !*** external "sketch/dom" ***!
-  \*****************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("sketch/dom");
 
 /***/ }),
 
@@ -94721,6 +94853,40 @@ that['onSupplyLastName'] = __skpm_run.bind(this, 'onSupplyLastName');
 that['onSupplyPhoneNumber'] = __skpm_run.bind(this, 'onSupplyPhoneNumber');
 that['onSupplyLoremParagraph'] = __skpm_run.bind(this, 'onSupplyLoremParagraph');
 that['onSupplyLoremParagraphs'] = __skpm_run.bind(this, 'onSupplyLoremParagraphs');
-that['onRun'] = __skpm_run.bind(this, 'default')
+that['onRun'] = __skpm_run.bind(this, 'default');
+that['setLayerNameAndData'] = __skpm_run.bind(this, 'setLayerNameAndData');
+that['setLayerNameAndData'] = __skpm_run.bind(this, 'setLayerNameAndData');
+that['setLayerNameAndData'] = __skpm_run.bind(this, 'setLayerNameAndData');
+that['setLayerNameAndData'] = __skpm_run.bind(this, 'setLayerNameAndData');
+that['setLayerNameAndData'] = __skpm_run.bind(this, 'setLayerNameAndData');
+that['setLayerNameAndData'] = __skpm_run.bind(this, 'setLayerNameAndData');
+that['setLayerNameAndData'] = __skpm_run.bind(this, 'setLayerNameAndData');
+that['setLayerNameAndData'] = __skpm_run.bind(this, 'setLayerNameAndData');
+that['setLayerNameAndData'] = __skpm_run.bind(this, 'setLayerNameAndData');
+that['setLayerNameAndData'] = __skpm_run.bind(this, 'setLayerNameAndData');
+that['setLayerNameAndData'] = __skpm_run.bind(this, 'setLayerNameAndData');
+that['setLayerNameAndData'] = __skpm_run.bind(this, 'setLayerNameAndData');
+that['setLayerNameAndData'] = __skpm_run.bind(this, 'setLayerNameAndData');
+that['setLayerNameAndData'] = __skpm_run.bind(this, 'setLayerNameAndData');
+that['setLayerNameAndData'] = __skpm_run.bind(this, 'setLayerNameAndData');
+that['setLayerNameAndData'] = __skpm_run.bind(this, 'setLayerNameAndData');
+that['setLayerNameAndData'] = __skpm_run.bind(this, 'setLayerNameAndData');
+that['setLayerNameAndData'] = __skpm_run.bind(this, 'setLayerNameAndData');
+that['setLayerNameAndData'] = __skpm_run.bind(this, 'setLayerNameAndData');
+that['setLayerNameAndData'] = __skpm_run.bind(this, 'setLayerNameAndData');
+that['setLayerNameAndData'] = __skpm_run.bind(this, 'setLayerNameAndData');
+that['setLayerNameAndData'] = __skpm_run.bind(this, 'setLayerNameAndData');
+that['setLayerNameAndData'] = __skpm_run.bind(this, 'setLayerNameAndData');
+that['setLayerNameAndData'] = __skpm_run.bind(this, 'setLayerNameAndData');
+that['setLayerNameAndData'] = __skpm_run.bind(this, 'setLayerNameAndData');
+that['setLayerNameAndData'] = __skpm_run.bind(this, 'setLayerNameAndData');
+that['setLayerNameAndData'] = __skpm_run.bind(this, 'setLayerNameAndData');
+that['setLayerNameAndData'] = __skpm_run.bind(this, 'setLayerNameAndData');
+that['setLayerNameAndData'] = __skpm_run.bind(this, 'setLayerNameAndData');
+that['setLayerNameAndData'] = __skpm_run.bind(this, 'setLayerNameAndData');
+that['setLayerNameAndData'] = __skpm_run.bind(this, 'setLayerNameAndData');
+that['setLayerNameAndData'] = __skpm_run.bind(this, 'setLayerNameAndData');
+that['setLayerNameAndData'] = __skpm_run.bind(this, 'setLayerNameAndData');
+that['setLayerNameAndData'] = __skpm_run.bind(this, 'setLayerNameAndData')
 
 //# sourceMappingURL=index.js.map

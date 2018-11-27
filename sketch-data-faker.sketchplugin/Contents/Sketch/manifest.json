@@ -20,12 +20,267 @@
           "SupplyLoremParagraphs": "onSupplyLoremParagraphs"
         }
       }
+    },
+    {
+      "name": "US Zip Code",
+      "identifier": "address.zipCode",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "City Name",
+      "identifier": "address.city",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "City Prefix",
+      "identifier": "address.cityPrefix",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "City Suffix",
+      "identifier": "address.citySuffix",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Street Name",
+      "identifier": "address.streetName",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Street Address",
+      "identifier": "address.streetAddress",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Street Suffix",
+      "identifier": "address.streetSuffix",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Street Prefix",
+      "identifier": "address.streetPrefix",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Secondary Address Line",
+      "identifier": "address.secondaryAddress",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "County",
+      "identifier": "address.county",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Country",
+      "identifier": "address.country",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Country Code",
+      "identifier": "address.countryCode",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "State",
+      "identifier": "address.state",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "State Abbreviation",
+      "identifier": "address.stateAbbr",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Latitude",
+      "identifier": "address.latitude",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Longitude",
+      "identifier": "address.longitude",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "(Brand) Color",
+      "identifier": "commerce.color",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Business Department",
+      "identifier": "commerce.department",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Product Name",
+      "identifier": "commerce.productName",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Price",
+      "identifier": "commerce.price",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Product Adjective",
+      "identifier": "commerce.productAdjective",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Product Material",
+      "identifier": "commerce.productMaterial",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Product",
+      "identifier": "commerce.product",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Company Suffixes",
+      "identifier": "company.suffixes",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Company Name",
+      "identifier": "company.companyName",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Company Suffix",
+      "identifier": "company.companySuffix",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Company Catchphrase",
+      "identifier": "company.catchPhrase",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Company BS Phrase",
+      "identifier": "company.bs",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Catchphrase Adjective",
+      "identifier": "company.catchPhraseAdjective",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Catchphrase Descriptor",
+      "identifier": "company.catchPhraseDescriptor",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Catchphrase Noun",
+      "identifier": "company.catchPhraseNoun",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "BS Adjective",
+      "identifier": "company.bsAdjective",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "BS Buzzword Verb",
+      "identifier": "company.bsBuzz",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "BS Buzzword Noun",
+      "identifier": "company.bsNoun",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
     }
   ],
   "menu": {
-    "title": "Sketch Data Faker"
+    "title": "Sketch Data Faker",
+    "items": [
+      {
+        "title": "Addresses",
+        "items": [
+          "address.zipCode",
+          "address.city",
+          "address.cityPrefix",
+          "address.citySuffix",
+          "address.streetName",
+          "address.streetAddress",
+          "address.streetSuffix",
+          "address.streetPrefix",
+          "address.secondaryAddress",
+          "address.county",
+          "address.country",
+          "address.countryCode",
+          "address.state",
+          "address.stateAbbr",
+          "address.latitude",
+          "address.longitude"
+        ]
+      },
+      {
+        "title": "Commerce",
+        "items": [
+          "commerce.color",
+          "commerce.department",
+          "commerce.productName",
+          "commerce.price",
+          "commerce.productAdjective",
+          "commerce.productMaterial",
+          "commerce.product"
+        ]
+      },
+      {
+        "title": "Company",
+        "items": [
+          "company.suffixes",
+          "company.companyName",
+          "company.companySuffix",
+          "company.catchPhrase",
+          "company.bs",
+          "company.catchPhraseAdjective",
+          "company.catchPhraseDescriptor",
+          "company.catchPhraseNoun",
+          "company.bsAdjective",
+          "company.bsBuzz",
+          "company.bsNoun"
+        ]
+      }
+    ]
   },
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "A Sketch plugin providing 100+ types of realistic (fake) data for your mockups from Faker.js and other sources.",
   "homepage": "https://sketchfaker.com",
   "name": "Sketch Data Faker",
