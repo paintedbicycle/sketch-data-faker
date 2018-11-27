@@ -216,7 +216,7 @@ You can name your layer any of these below. Remember to first put the category a
 | Locale                  | `random.locale`       | "en_US", "zh_CN"                             | Text      | Faker.js    |
 | Random Letter or Number | `random.alphaNumeric` | "j", "4"                                     | Text      | Faker.js    |
 
-## Computer System
+## Files
 
 | Name             | Layer Name              | Example Data                        | Data Type | Data Source |
 | ---------------- | ----------------------- | ----------------------------------- | --------- | ----------- |

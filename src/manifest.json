@@ -22,14 +22,42 @@
       }
     },
     {
-      "name": "Rename Layer",
+      "name": "Address",
       "identifier": "rename-layer",
       "handler": "onChangeLayerName",
-      "script": "index.js"
+      "script": "commands/address.js"
     }
   ],
   "menu": {
     "title": "Sketch Data Faker",
-    "items": ["rename-layer"]
+    "items": [
+      {
+        "title": "Address",
+        "items": [
+          {
+            "title": "Other",
+            "items": [
+              "text-custom-string",
+              "text-enumerate",
+              "text-replace-text",
+              "text-time-ago"
+            ]
+          },
+
+          {
+            "title": "Fillerati",
+            "items": ["text-generate-fillerati", "text-replace-fillerati"]
+          },
+          {
+            "title": "Hipsum",
+            "items": ["text-generate-hipsum", "text-replace-hipsum"]
+          },
+          {
+            "title": "Lorem",
+            "items": ["text-generate-lorem", "text-replace-lorem"]
+          }
+        ]
+      }
+    ]
   }
 }
