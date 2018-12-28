@@ -16,6 +16,7 @@
           "SupplyFirstName": "onSupplyFirstName",
           "SupplyLastName": "onSupplyLastName",
           "SupplyPhoneNumber": "onSupplyPhoneNumber",
+          "SupplyLoremSentence": "onSupplyLoremSentence",
           "SupplyLoremParagraph": "onSupplyLoremParagraph",
           "SupplyLoremParagraphs": "onSupplyLoremParagraphs"
         }
@@ -224,63 +225,652 @@
       "identifier": "company.bsNoun",
       "handler": "setLayerNameAndData",
       "script": "index.js"
+    },
+    {
+      "name": "Database Column Name",
+      "identifier": "database.column",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Database Column Type",
+      "identifier": "database.type",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Database Collation",
+      "identifier": "database.collation",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Database Engine",
+      "identifier": "database.engine",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Past Date (Full)",
+      "identifier": "date.past",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Future Date (Full)",
+      "identifier": "date.future",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Recent Date (Full)",
+      "identifier": "date.recent",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Month",
+      "identifier": "date.month",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Weekday",
+      "identifier": "date.weekday",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Account Number",
+      "identifier": "finance.account",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Account Name/Type",
+      "identifier": "finance.accountName",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Credit Card Last 4",
+      "identifier": "finance.mask",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Purchase Amount / Price",
+      "identifier": "finance.amount",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Transaction Type",
+      "identifier": "finance.transactionType",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Currency Code",
+      "identifier": "finance.currencyCode",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Currency Name",
+      "identifier": "finance.currencyName",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Currency Symbol",
+      "identifier": "finance.currencySymbol",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Bitcoin Address",
+      "identifier": "finance.bitcoinAddress",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "IBAN Number",
+      "identifier": "finance.iban",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "BIC Code",
+      "identifier": "finance.bic",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Technical Abbreviation",
+      "identifier": "hacker.abbreviation",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Technical Adjective",
+      "identifier": "hacker.adjective",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Technical Noun",
+      "identifier": "hacker.noun",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Technical Verb",
+      "identifier": "hacker.verb",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Technical '-Ing' Verb",
+      "identifier": "hacker.ingverb",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "'Hacker' Phrase",
+      "identifier": "hacker.phrase",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Email Address",
+      "identifier": "internet.email",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Example.org Email Address",
+      "identifier": "internet.exampleEmail",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Username",
+      "identifier": "internet.userName",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Internet Protocol",
+      "identifier": "internet.protocol",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "URL",
+      "identifier": "internet.url",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Domain Name",
+      "identifier": "internet.domainName",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Domain Suffix",
+      "identifier": "internet.domainSuffix",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Domain Word",
+      "identifier": "internet.domainWord",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "IP Address",
+      "identifier": "internet.ip",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "IPv6 Address",
+      "identifier": "internet.ipv6",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "User Agent String",
+      "identifier": "internet.userAgent",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "HEX Colo(u)r Code",
+      "identifier": "internet.color",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "MAC Address",
+      "identifier": "internet.mac",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Sample Password",
+      "identifier": "internet.password",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Lorem Word",
+      "identifier": "lorem.word",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Lorem Words",
+      "identifier": "lorem.words",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Lorem Sentence",
+      "identifier": "lorem.sentence",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Lorem Slug",
+      "identifier": "lorem.slug",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Lorem Sentences",
+      "identifier": "lorem.sentences",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Lorem Paragraph",
+      "identifier": "lorem.paragraph",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Lorem Paragraphs",
+      "identifier": "lorem.paragraphs",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Lorem Text",
+      "identifier": "lorem.text",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Lorem Lines",
+      "identifier": "lorem.lines",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "First Name",
+      "identifier": "name.firstName",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Last Name",
+      "identifier": "name.lastName",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Full Name (First Last)",
+      "identifier": "name.findName",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Job Title",
+      "identifier": "name.jobTitle",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Name Prefix",
+      "identifier": "name.prefix",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Name Suffix",
+      "identifier": "name.suffix",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Title",
+      "identifier": "name.title",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Job Descriptor Word",
+      "identifier": "name.jobDescriptor",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Job Area",
+      "identifier": "name.jobArea",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Job Type",
+      "identifier": "name.jobType",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Phone Number",
+      "identifier": "phone.phoneNumber",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "North American Phone Number",
+      "identifier": "phone.phoneNumberFormat",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Phone Format Placeholder",
+      "identifier": "phone.phoneFormats",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Random Number",
+      "identifier": "random.number",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "UUID",
+      "identifier": "random.uuid",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Boolean",
+      "identifier": "random.boolean",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Random Word",
+      "identifier": "random.word",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Random Words",
+      "identifier": "random.words",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Language Locale",
+      "identifier": "random.locale",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Random AlphaNum Character",
+      "identifier": "random.alphaNumeric",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Random Filename",
+      "identifier": "system.fileName",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Common Filename",
+      "identifier": "system.commonFileName",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "MIME Type",
+      "identifier": "system.mimeType",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Common File Type",
+      "identifier": "system.commonFileType",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "File Extension",
+      "identifier": "system.fileExt",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Common File Extension",
+      "identifier": "system.commonFileExt",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "File Type",
+      "identifier": "system.fileType",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
+    },
+    {
+      "name": "Semver",
+      "identifier": "system.semver",
+      "handler": "setLayerNameAndData",
+      "script": "index.js"
     }
   ],
   "menu": {
     "title": "Sketch Data Faker",
     "items": [
       {
-        "title": "Addresses",
+        "title": "Set Layer Name",
         "items": [
-          "address.zipCode",
-          "address.city",
-          "address.cityPrefix",
-          "address.citySuffix",
-          "address.streetName",
-          "address.streetAddress",
-          "address.streetSuffix",
-          "address.streetPrefix",
-          "address.secondaryAddress",
-          "address.county",
-          "address.country",
-          "address.countryCode",
-          "address.state",
-          "address.stateAbbr",
-          "address.latitude",
-          "address.longitude"
-        ]
-      },
-      {
-        "title": "Commerce",
-        "items": [
-          "commerce.color",
-          "commerce.department",
-          "commerce.productName",
-          "commerce.price",
-          "commerce.productAdjective",
-          "commerce.productMaterial",
-          "commerce.product"
-        ]
-      },
-      {
-        "title": "Company",
-        "items": [
-          "company.suffixes",
-          "company.companyName",
-          "company.companySuffix",
-          "company.catchPhrase",
-          "company.bs",
-          "company.catchPhraseAdjective",
-          "company.catchPhraseDescriptor",
-          "company.catchPhraseNoun",
-          "company.bsAdjective",
-          "company.bsBuzz",
-          "company.bsNoun"
+          {
+            "title": "Addresses",
+            "items": [
+              "address.zipCode",
+              "address.city",
+              "address.cityPrefix",
+              "address.citySuffix",
+              "address.streetName",
+              "address.streetAddress",
+              "address.streetSuffix",
+              "address.streetPrefix",
+              "address.secondaryAddress",
+              "address.county",
+              "address.country",
+              "address.countryCode",
+              "address.state",
+              "address.stateAbbr",
+              "address.latitude",
+              "address.longitude"
+            ]
+          },
+          {
+            "title": "Commerce/Money/Product",
+            "items": [
+              "commerce.color",
+              "commerce.department",
+              "commerce.productName",
+              "commerce.price",
+              "commerce.productAdjective",
+              "commerce.productMaterial",
+              "commerce.product"
+            ]
+          },
+          {
+            "title": "Company/Startup",
+            "items": [
+              "company.suffixes",
+              "company.companyName",
+              "company.companySuffix",
+              "company.catchPhrase",
+              "company.bs",
+              "company.catchPhraseAdjective",
+              "company.catchPhraseDescriptor",
+              "company.catchPhraseNoun",
+              "company.bsAdjective",
+              "company.bsBuzz",
+              "company.bsNoun"
+            ]
+          },
+          {
+            "title": "Dates",
+            "items": [
+              "date.past",
+              "date.future",
+              "date.recent",
+              "date.month",
+              "date.weekday"
+            ]
+          },
+          {
+            "title": "Finance/Bank",
+            "items": [
+              "finance.account",
+              "finance.accountName",
+              "finance.mask",
+              "finance.amount",
+              "finance.transactionType",
+              "finance.currencyCode",
+              "finance.currencyName",
+              "finance.currencySymbol",
+              "finance.bitcoinAddress",
+              "finance.iban",
+              "finance.bic"
+            ]
+          },
+          {
+            "title": "Computers/Technical",
+            "items": [
+              "hacker.abbreviation",
+              "hacker.adjective",
+              "hacker.noun",
+              "hacker.verb",
+              "hacker.ingverb",
+              "hacker.phrase",
+              "database.column",
+              "database.type",
+              "database.collation",
+              "database.engine"
+            ]
+          },
+          {
+            "title": "Internet",
+            "items": [
+              "internet.email",
+              "internet.exampleEmail",
+              "internet.userName",
+              "internet.protocol",
+              "internet.url",
+              "internet.domainName",
+              "internet.domainSuffix",
+              "internet.domainWord",
+              "internet.ip",
+              "internet.ipv6",
+              "internet.userAgent",
+              "internet.color",
+              "internet.mac",
+              "internet.password"
+            ]
+          },
+          {
+            "title": "Lorem",
+            "items": [
+              "lorem.word",
+              "lorem.words",
+              "lorem.sentence",
+              "lorem.slug",
+              "lorem.sentences",
+              "lorem.paragraph",
+              "lorem.paragraphs",
+              "lorem.text",
+              "lorem.lines"
+            ]
+          },
+          {
+            "title": "Name",
+            "items": [
+              "name.firstName",
+              "name.lastName",
+              "name.findName",
+              "name.jobTitle",
+              "name.prefix",
+              "name.suffix",
+              "name.title",
+              "name.jobDescriptor",
+              "name.jobArea",
+              "name.jobType"
+            ]
+          },
+          {
+            "title": "Phone",
+            "items": [
+              "phone.phoneNumber",
+              "phone.phoneNumberFormat",
+              "phone.phoneFormats"
+            ]
+          },
+          {
+            "title": "Random",
+            "items": [
+              "random.number",
+              "random.uuid",
+              "random.boolean",
+              "random.word",
+              "random.words",
+              "random.locale",
+              "random.alphaNumeric"
+            ]
+          },
+          {
+            "title": "Files",
+            "items": [
+              "system.fileName",
+              "system.commonFileName",
+              "system.mimeType",
+              "system.commonFileType",
+              "system.fileExt",
+              "system.commonFileExt",
+              "system.fileType",
+              "system.semver"
+            ]
+          }
         ]
       }
     ]
   },
-  "version": "0.1.9",
+  "version": "0.2.0",
   "description": "A Sketch plugin providing 100+ types of realistic (fake) data for your mockups from Faker.js and other sources.",
   "homepage": "https://sketchfaker.com",
   "name": "Sketch Data Faker",
