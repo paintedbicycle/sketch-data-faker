@@ -32,6 +32,11 @@ export function onStartup() {
   );
   DataSupplier.registerDataSupplier(
     'public.text',
+    'Lorem Sentence',
+    'SupplyLoremSentence'
+  );
+  DataSupplier.registerDataSupplier(
+    'public.text',
     'Lorem Paragraph',
     'SupplyLoremParagraph'
   );
@@ -68,6 +73,9 @@ export function onSupplyEmail(context) {
 }
 export function onSupplyPhoneNumber(context) {
   supplyFakerData(context, 'phoneNumber');
+}
+export function onSupplyLoremSentence(context) {
+  supplyFakerData(context, 'loremSentence');
 }
 export function onSupplyLoremParagraph(context) {
   supplyFakerData(context, 'loremParagraph');
