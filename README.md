@@ -123,19 +123,19 @@ You can name your layer any of these below. Remember to first put the category a
 
 ## Finance
 
-| Name             | Layer Name                | Example Data                    | Data Type | Data Source |
-| ---------------- | ------------------------- | ------------------------------- | --------- | ----------- |
-| Account          | `finance.account`         | "54352123"                      | Text      | Faker.js    |
-| Account Name     | `finance.accountName`     | "Savings Account"               | Text      | Faker.js    |
-| Last 4           | `finance.mask`            | "7577", "2558"                  | Text      | Faker.js    |
-| Amount           | `finance.amount`          | "690.53", "946.42"              | Text      | Faker.js    |
-| Transaction Type | `finance.transactionType` | "payment" , deposit"            | Text      | Faker.js    |
-| Currency Code    | `finance.currencyCode`    | "SYP", "USD", "CAD"             | Text      | Faker.js    |
-| Currency Name    | `finance.currencyName`    | "Turkish Lira", "Nuevo Sol"     | Text      | Faker.js    |
-| Currency Symbol  | `finance.currencySymbol`  | "$", "ден", "﷼", "$U"           | Text      | Faker.js    |
-| Bitcoin Address  | `finance.bitcoinAddress`  | "1MBD5F25RM4J0SO7IFLK9K6JXZGUZ" | Text      | Faker.js    |
-| iban             | `finance.iban`            | "CH65279625495775545L7"         | Text      | Faker.js    |
-| bic              | `finance.bic`             | "HBMOHMJ1"                      | Text      | Faker.js    |
+| Name              | Layer Name                | Example Data                    | Data Type | Data Source |
+| ----------------- | ------------------------- | ------------------------------- | --------- | ----------- |
+| Account Number    | `finance.account`         | "54352123"                      | Text      | Faker.js    |
+| Account Name/Type | `finance.accountName`     | "Savings Account"               | Text      | Faker.js    |
+| Last 4            | `finance.mask`            | "7577", "2558"                  | Text      | Faker.js    |
+| Amount            | `finance.amount`          | "690.53", "946.42"              | Text      | Faker.js    |
+| Transaction Type  | `finance.transactionType` | "payment" , deposit"            | Text      | Faker.js    |
+| Currency Code     | `finance.currencyCode`    | "SYP", "USD", "CAD"             | Text      | Faker.js    |
+| Currency Name     | `finance.currencyName`    | "Turkish Lira", "Nuevo Sol"     | Text      | Faker.js    |
+| Currency Symbol   | `finance.currencySymbol`  | "$", "ден", "﷼", "$U"           | Text      | Faker.js    |
+| Bitcoin Address   | `finance.bitcoinAddress`  | "1MBD5F25RM4J0SO7IFLK9K6JXZGUZ" | Text      | Faker.js    |
+| iban              | `finance.iban`            | "CH65279625495775545L7"         | Text      | Faker.js    |
+| bic               | `finance.bic`             | "HBMOHMJ1"                      | Text      | Faker.js    |
 
 ## Computer
 
