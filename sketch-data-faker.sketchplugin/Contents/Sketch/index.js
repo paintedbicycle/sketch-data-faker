@@ -4194,7 +4194,7 @@ var that=this;function __skpm_run(a,e){that.context=e;var o=function(a){var e={}
 /*!***********************!*\
   !*** ./src/config.js ***!
   \***********************/
-/*! exports provided: default */function(a,e,o){"use strict";o.r(e);e.default={debug:!0}},"./src/faker.js":
+/*! exports provided: default */function(a,e,o){"use strict";o.r(e);e.default={debug:!1}},"./src/faker.js":
 /*!**********************!*\
   !*** ./src/faker.js ***!
   \**********************/
