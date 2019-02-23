@@ -49,7 +49,7 @@ Quick examples:
 - To insert a Domain Name, rename your text layer `internet.domainName`
 - There are words, colours, cities, states, prices, product names, verbs, adjectives, catch phrases, buzzwords, and more.
 
-## Layer Renaming Helper
+### Layer Renaming Helper
 
 If you want help renaming your layers, Sketch Data Faker provides a menu inside the Sketch Plugin menu that will allow you to change your layer names without typing:
 
@@ -63,11 +63,11 @@ If you want help renaming your layers, Sketch Data Faker provides a menu inside 
 
 *You can find the Data menu either by: `Right-click on a selected layer`, `Control-click on a selected layer`, from the `Layer` menu item in Sketch
 
-#### Full list:
+## Full Data List:
 
 You can name your layer to of these Layer Names below. Remember to follow the category.type format (i.e. `address.city`, not just `city`).
 
-## Address Data
+### Address Data
 
 | Name              | Layer Name                 | Example Data             | Data Type | Data Source |
 | ----------------- | -------------------------- | ------------------------ | --------- | ----------- |
@@ -88,7 +88,7 @@ You can name your layer to of these Layer Names below. Remember to follow the ca
 | Latitude          | `address.latitude`         | "0.2228"                 | Text      | Faker.js    |
 | Longitude         | `address.longitude`        | "112.5458"               | Text      | Faker.js    |
 
-## Commerce
+### Commerce
 
 | Name              | Layer Name                  | Example Data               | Data Type | Data Source |
 | ----------------- | --------------------------- | -------------------------- | --------- | ----------- |
@@ -100,7 +100,7 @@ You can name your layer to of these Layer Names below. Remember to follow the ca
 | Product Material  | `commerce.productMaterial`  | "Plastic", "Granite"       | Text      | Faker.js    |
 | Product           | `commerce.product`          | "Tuna", "Gloves", "Soap"   | Text      | Faker.js    |
 
-## Company
+### Company
 
 | Name             | Layer Name                      | Example Data                           | Data Type | Data Source |
 | ---------------- | ------------------------------- | -------------------------------------- | --------- | ----------- |
@@ -116,7 +116,7 @@ You can name your layer to of these Layer Names below. Remember to follow the ca
 | Buzz             | `company.bsBuzz`                | "grow", "expedite", "drive"            | Text      | Faker.js    |
 | Noun             | `company.bsNoun`                | "convergence", "content", "e-commerce" | Text      | Faker.js    |
 
-## Database
+### Database
 
 | Name               | Layer Name           | Example Data                  | Data Type | Data Source |
 | ------------------ | -------------------- | ----------------------------- | --------- | ----------- |
@@ -125,7 +125,7 @@ You can name your layer to of these Layer Names below. Remember to follow the ca
 | Database Collation | `database.collation` | "utf8_unicode_ci", "utf8_bin" | Text      | Faker.js    |
 | Database Engine    | `database.engine`    | "InnoDB", "CVS"               | Text      | Faker.js    |
 
-## Date
+### Date
 
 | Name             | Layer Name     | Example Data                              | Data Type | Data Source |
 | ---------------- | -------------- | ----------------------------------------- | --------- | ----------- |
@@ -135,7 +135,7 @@ You can name your layer to of these Layer Names below. Remember to follow the ca
 | Month            | `date.month`   | "October"                                 | Text      | Faker.js    |
 | Weekday          | `date.weekday` | "Thursday"                                | Text      | Faker.js    |
 
-## Finance
+### Finance
 
 | Name              | Layer Name                | Example Data                    | Data Type | Data Source |
 | ----------------- | ------------------------- | ------------------------------- | --------- | ----------- |
@@ -151,7 +151,7 @@ You can name your layer to of these Layer Names below. Remember to follow the ca
 | iban              | `finance.iban`            | "CH65279625495775545L7"         | Text      | Faker.js    |
 | bic               | `finance.bic`             | "HBMOHMJ1"                      | Text      | Faker.js    |
 
-## Computer
+### Computer
 
 | Name          | Layer Name            | Example Data                                                    | Data Type | Data Source |
 | ------------- | --------------------- | --------------------------------------------------------------- | --------- | ----------- |
@@ -162,7 +162,7 @@ You can name your layer to of these Layer Names below. Remember to follow the ca
 | ing-verb      | `hacker.ingverb`      | "calculating", "backing up"                                     | Text      | Faker.js    |
 | Hacker Phrase | `hacker.phrase`       | "Use the online AGP system, then you can hack the haptic card!" | Text      | Faker.js    |
 
-## Internet
+### Internet
 
 | Name           | Layer Name              | Example Data                                                      | Data Type | Data Source |
 | -------------- | ----------------------- | ----------------------------------------------------------------- | --------- | ----------- |
@@ -181,7 +181,7 @@ You can name your layer to of these Layer Names below. Remember to follow the ca
 | MAC Address    | `internet.mac`          | "fb:d0:06:f8:b0:c8"                                               | Text      | Faker.js    |
 | Password       | `internet.password`     | "gO40I5BVEUfetWO", "kUrNsxJa3yXoYr\_"                             | Text      | Faker.js    |
 
-## Lorem
+### Lorem
 
 | Name       | Layer Name         | Example Data                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Data Type | Data Source |
 | ---------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------- | ----------- |
@@ -195,7 +195,7 @@ You can name your layer to of these Layer Names below. Remember to follow the ca
 | Text       | `lorem.text`       | "Aut iste libero unde."                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Text      | Faker.js    |
 | Lines      | `lorem.lines`      | "Et placeat nisi rem ut vitae sed dolore."                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Text      | Faker.js    |
 
-## Name
+### Name
 
 | Name           | Layer Name           | Example Data                | Data Type | Data Source |
 | -------------- | -------------------- | --------------------------- | --------- | ----------- |
@@ -210,7 +210,7 @@ You can name your layer to of these Layer Names below. Remember to follow the ca
 | Job Area       | `name.jobArea`       | "Security", "Functionality" | Text      | Faker.js    |
 | Job Type       | `name.jobType`       | "Agent", "Architect"        | Text      | Faker.js    |
 
-## Phone
+### Phone
 
 | Name                       | Layer Name                | Example Data                           | Data Type | Data Source |
 | -------------------------- | ------------------------- | -------------------------------------- | --------- | ----------- |
@@ -218,7 +218,7 @@ You can name your layer to of these Layer Names below. Remember to follow the ca
 | North America Phone Number | `phone.phoneNumberFormat` | "994-651-4933"                         | Text      | Faker.js    |
 | Phone Formats              | `phone.phoneFormats`      | "###.###.####", "1-###-###-#### x####" | Text      | Faker.js    |
 
-## Random
+### Random
 
 | Name                    | Layer Name            | Example Data                                 | Data Type | Data Source |
 | ----------------------- | --------------------- | -------------------------------------------- | --------- | ----------- |
@@ -230,7 +230,7 @@ You can name your layer to of these Layer Names below. Remember to follow the ca
 | Locale                  | `random.locale`       | "en_US", "zh_CN"                             | Text      | Faker.js    |
 | Random Letter or Number | `random.alphaNumeric` | "j", "4"                                     | Text      | Faker.js    |
 
-## Files
+### Files
 
 | Name             | Layer Name              | Example Data                        | Data Type | Data Source |
 | ---------------- | ----------------------- | ----------------------------------- | --------- | ----------- |
