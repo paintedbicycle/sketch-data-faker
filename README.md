@@ -55,11 +55,11 @@ If you want help renaming your layers, Sketch Data Faker provides a menu inside 
 
 1. In Sketch, select the layer(s) you want to rename
 2. Go to `Plugins -> Sketch Data Faker -> Set Layer Name` and choose the type of content you want to insert into that layer
-2b. You can repeat this process for all layers you want to insert new content into
+i. 2b. You can repeat this process for all layers you want to insert new content into
 3. With the layers still selected in Sketch, set the data source* `Data -> Sketch Data Faker -> Auto (Layer name)`
 4. Watch as all your selected layers get replaced with new content!
 
-* You can find the Data menu either by: `Right-click on a selected layer`, `Control-click on a selected layer`, from the `Layer` menu item in Sketch
+*You can find the Data menu either by: `Right-click on a selected layer`, `Control-click on a selected layer`, from the `Layer` menu item in Sketch
 
 #### Full list:
 
