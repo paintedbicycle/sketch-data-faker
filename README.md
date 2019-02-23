@@ -49,6 +49,18 @@ Quick examples:
 - To insert a Domain Name, rename your text layer `internet.domainName`
 - There are words, colours, cities, states, prices, product names, verbs, adjectives, catch phrases, buzzwords, and more.
 
+## Layer Renaming Helper
+
+If you want help renaming your layers, Sketch Data Faker provides a menu inside the Sketch Plugin menu that will allow you to change your layer names without typing:
+
+1. In Sketch, select the layer(s) you want to rename
+2. Go to `Plugins -> Sketch Data Faker -> Set Layer Name` and choose the type of content you want to insert into that layer
+2b. You can repeat this process for all layers you want to insert new content into
+3. With the layers still selected in Sketch, set the data source* `Data -> Sketch Data Faker -> Auto (Layer name)`
+4. Watch as all your selected layers get replaced with new content!
+
+* You can find the Data menu either by: `Right-click on a selected layer`, `Control-click on a selected layer`, from the `Layer` menu item in Sketch
+
 #### Full list:
 
 You can name your layer to of these Layer Names below. Remember to follow the category.type format (i.e. `address.city`, not just `city`).
@@ -70,7 +82,7 @@ You can name your layer to of these Layer Names below. Remember to follow the ca
 | Country           | `address.country`          | "Bangladesh", "Cuba"     | Text      | Faker.js    |
 | Country Code      | `address.countryCode`      | "CA", "US" , "SL"        | Text      | Faker.js    |
 | State             | `address.state`            | "Wisconsin", "Ohio"      | Text      | Faker.js    |
-| State Abbr        | `address.stateAbbr`        | "WI", "IN                | Text      | Faker.js    |
+| State Abbr        | `address.stateAbbr`        | "WI", "IN"               | Text      | Faker.js    |
 | Latitude          | `address.latitude`         | "0.2228"                 | Text      | Faker.js    |
 | Longitude         | `address.longitude`        | "112.5458"               | Text      | Faker.js    |
 
