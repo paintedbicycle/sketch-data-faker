@@ -243,6 +243,58 @@ You can name your layer to of these Layer Names below. Remember to follow the ca
 | File Type        | `system.fileType`       | "image", "font"                     | Text      | Faker.js    |
 | Version          | `system.semver`         | "2.6.9"                             | Text      | Faker.js    |
 
+## Localization / Translations
+
+Sketch Data Faker supports localization on all text strings, where Faker.js also supports it. In order to set a layer to a specific language or locale, append `|xx` to the end where `xx` is the local code.
+
+For example, if you want a `First Name` to be German, you would use `name.firstName|de` as your layer name. If you want the product name to be in Canadian English, you would use `commerce.productName|en_CA`. 
+
+See the full list of locales below. Note that Sketch Data Faker will fall back to English if the locale code is wrong or if there is no available translation for that term.
+
+## List of Locales
+- az
+- cz
+- de
+- de_AT
+- de_CH
+- en
+- en_AU
+- en_BORK
+- en_CA
+- en_GB
+- en_IE
+- en_IND
+- en_US
+- en_ZA
+- en_au_ocker
+- es
+- es_MX
+- fa
+- fr
+- fr_CA
+- ge
+- id_ID
+- it
+- ja
+- ko
+- nb_NO
+- nep
+- nl
+- pl
+- pt_BR
+- pt_PT
+- ru
+- sk
+- sv
+- tr
+- uk
+- vi
+- zh_CN
+- zh_TW
+
+## Changelog
+0.4 - Introduce i18n
+
 ## Data Source and Credits
 
 All data is from the great faker.js project: <https://github.com/marak/Faker.js/>
