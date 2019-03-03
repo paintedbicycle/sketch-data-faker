@@ -8,7 +8,7 @@
   "author": "Paul Wright",
   "homepage": "https://sketchfaker.com",
   "identifier": "com.paintedbicycle.sketch.sketchfaker",
-  "appcast": "https://raw.githubusercontent.com/paintedbicycle/sketch-data-faker/master/.appcast.xml",
+  "appcast": ".appcast.xml",
   "icon": "icon.png",
   "skpm": {
     "name": "Sketch Data Faker",
