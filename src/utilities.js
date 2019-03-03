@@ -98,7 +98,8 @@ export function googleAnalytics(context, category, action, label, value) {
     url += '&ev=' + encodeURI(value);
   }
 
-  console.log('url', url);
+  if (debugMode) console.log('url', url);
+
   let session = NSURLSession.sharedSession(),
     task = session.dataTaskWithURL(
       NSURL.URLWithString(NSString.stringWithString(url))

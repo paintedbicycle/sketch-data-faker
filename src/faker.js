@@ -14,8 +14,6 @@ export function supplyFakerData(context, type) {
   const items = util.toArray(context.data.items).map(sketch.fromNative);
   let errors = [];
 
-  console.log('context', context);
-
   items.forEach((item, index) => {
     let newLayerData = null;
     let custom = false;
@@ -27,7 +25,18 @@ export function supplyFakerData(context, type) {
       item.override ? item.override.path : item.id
     );
     let originalLayerName = layer.name;
-    let searchTerm = '{{' + layer.name + '}}';
+    let search = originalLayerName.split('|')[0];
+    let locale = originalLayerName.split('|')[1];
+
+    // Set up search string
+    let searchTerm = '{{' + search + '}}';
+
+    // Set up locale
+    if (locale) {
+      faker.locale = locale;
+    } else {
+      faker.locale = 'en';
+    }
 
     switch (type) {
       case 'fullName':
