@@ -1,3 +1,36 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+**Table of Contents**
+
+- [Sketch Data Faker](#sketch-data-faker)
+  - [Installation](#installation)
+  - [How to Use](#how-to-use)
+    - [Manual Mode](#manual-mode)
+    - [Automatic Mode (Recommended)](#automatic-mode-recommended)
+      - [Automatic Mode Content Types](#automatic-mode-content-types)
+    - [Layer Renaming Helper](#layer-renaming-helper)
+  - [Full Data List:](#full-data-list)
+    - [Address Data](#address-data)
+    - [Commerce](#commerce)
+    - [Company](#company)
+    - [Database](#database)
+    - [Date](#date)
+    - [Finance](#finance)
+    - [Computer](#computer)
+    - [Internet](#internet)
+    - [Lorem](#lorem)
+    - [Name](#name)
+    - [Phone](#phone)
+    - [Random](#random)
+    - [Files](#files)
+  - [Localization / Translations](#localization--translations)
+    - [List of Locales](#list-of-locales)
+  - [Changelog](#changelog)
+  - [Data Source and Credits](#data-source-and-credits)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Sketch Data Faker
 
 Sketch Data Faker enables you to insert random content into your Sketch files and you can specifiy what type of content for each layer.
@@ -58,10 +91,10 @@ If you want help renaming your layers, Sketch Data Faker provides a menu inside 
 
 2b. You can repeat this process for all layers you want to insert new content into
 
-3. With the layers still selected in Sketch, set the data source* `Data -> Sketch Data Faker -> Auto (Layer name)`
+3. With the layers still selected in Sketch, set the data source\* `Data -> Sketch Data Faker -> Auto (Layer name)`
 4. Watch as all your selected layers get replaced with new content!
 
-*You can find the Data menu either by: `Right-click on a selected layer`, `Control-click on a selected layer`, from the `Layer` menu item in Sketch
+\*You can find the Data menu either by: `Right-click on a selected layer`, `Control-click on a selected layer`, from the `Layer` menu item in Sketch
 
 ## Full Data List:
 
@@ -247,11 +280,12 @@ You can name your layer to of these Layer Names below. Remember to follow the ca
 
 Sketch Data Faker supports localization on all text strings, where Faker.js also supports it. In order to set a layer to a specific language or locale, append `|xx` to the end where `xx` is the local code.
 
-For example, if you want a `First Name` to be German, you would use `name.firstName|de` as your layer name. If you want the product name to be in Canadian English, you would use `commerce.productName|en_CA`. 
+For example, if you want a `First Name` to be German, you would use `name.firstName|de` as your layer name. If you want the product name to be in Canadian English, you would use `commerce.productName|en_CA`.
 
 See the full list of locales below. Note that Sketch Data Faker will fall back to English if the locale code is wrong or if there is no available translation for that term.
 
 ### List of Locales
+
 - az
 - cz
 - de
@@ -293,6 +327,7 @@ See the full list of locales below. Note that Sketch Data Faker will fall back t
 - zh_TW
 
 ## Changelog
+
 - 0.4 - New Feautre: i18n
 - 0.2.1 - New Feature: Layer renaming helper in plugin menu
 - 0.1.9 - New Feature: Ability to use on symbols
