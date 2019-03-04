@@ -1,36 +1,3 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-**Table of Contents**
-
-- [Sketch Data Faker](#sketch-data-faker)
-  - [Installation](#installation)
-  - [How to Use](#how-to-use)
-    - [Manual Mode](#manual-mode)
-    - [Automatic Mode (Recommended)](#automatic-mode-recommended)
-      - [Automatic Mode Content Types](#automatic-mode-content-types)
-    - [Layer Renaming Helper](#layer-renaming-helper)
-  - [Full Data List:](#full-data-list)
-    - [Address Data](#address-data)
-    - [Commerce](#commerce)
-    - [Company](#company)
-    - [Database](#database)
-    - [Date](#date)
-    - [Finance](#finance)
-    - [Computer](#computer)
-    - [Internet](#internet)
-    - [Lorem](#lorem)
-    - [Name](#name)
-    - [Phone](#phone)
-    - [Random](#random)
-    - [Files](#files)
-  - [Localization / Translations](#localization--translations)
-    - [List of Locales](#list-of-locales)
-  - [Changelog](#changelog)
-  - [Data Source and Credits](#data-source-and-credits)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 # Sketch Data Faker
 
 Sketch Data Faker enables you to insert random content into your Sketch files and you can specifiy what type of content for each layer.
@@ -39,6 +6,38 @@ Sketch Data Faker enables you to insert random content into your Sketch files an
 - It will insert a random version of that data into the specific layer that you select
 - You can refresh your layer to get a different value of that same type of data
 - It works inside Symbols, so one duplicated symbol can have different random content of the same type (i.e. a list of names)
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+**Table of Contents**
+
+- [Installation](#installation)
+- [How to Use](#how-to-use)
+  - [Manual Mode](#manual-mode)
+  - [Automatic Mode (Recommended)](#automatic-mode-recommended)
+    - [Automatic Mode Content Types](#automatic-mode-content-types)
+  - [Layer Renaming Helper](#layer-renaming-helper)
+- [Full Data List:](#full-data-list)
+  - [Address Data](#address-data)
+  - [Commerce](#commerce)
+  - [Company](#company)
+  - [Database](#database)
+  - [Date](#date)
+  - [Finance](#finance)
+  - [Computer](#computer)
+  - [Internet](#internet)
+  - [Lorem](#lorem)
+  - [Name](#name)
+  - [Phone](#phone)
+  - [Random](#random)
+  - [Files](#files)
+- [Localization / Translations](#localization--translations)
+  - [List of Locales](#list-of-locales)
+- [Changelog](#changelog)
+- [Data Source and Credits](#data-source-and-credits)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Installation
 
