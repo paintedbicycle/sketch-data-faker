@@ -21,19 +21,19 @@ There are 2 ways to use it: Manual (Basic) and Automatic (Recommended)
 - In **manual mode**, you select one of the specific pre-built types of data that Sketch Data Faker has made available in the dropdown menu. No setup/changes to your Sketch file needed.
 - In **automatic mode** (recommended), you can insert much more data - over 130 types of data, by _renaming your text layer_ using the chart below.
 
-## Manual Mode
+### Manual Mode
 
 - To use **manual mode**, right-click on the text layer and look inside the `Sketch Data Faker` menu inside the `Data Feeds` menu. Choose the type of data you want to insert. For example if you choose `Full Name`, your layer will now be replaced with a random full name (i.e. Jane Doe).
 - The layer text will be replaced with whatever type of data you chose. It's now linked up and good to go. You can even refresh the data to get different data from the same type and it works inside symbols, offering unique data for each symbol.
 
-## Automatic Mode (Recommended)
+### Automatic Mode (Recommended)
 
 - In **automatic mode** you **re-name your layer** with the type of data you want (see the chart below for all the data types you can use).
 - When you right click on the layer and go to the same menu as above, but this time, choose the `Auto (Layer Name)` option from the menu.
 - Your layer text will be replaced with random data of whatever type you changed your layer name to
 - The rest will work the same way as manual mode above.
 
-### Automatic Mode Content Types
+#### Automatic Mode Content Types
 
 - Once you select **Automatic Mode** by setting your layer to use `Auto (Layer Name)` from the _Sketch Data Faker_ menu, you then rename your layer to insert the over 130 types of text data.
 - The chart below has the data types (i.e. `address.zipCode`) that you can choose from.
