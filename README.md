@@ -1,6 +1,6 @@
 # Sketch Data Faker
 
-Sketch Data Faker enables you to insert data into your mockups.
+Sketch Data Faker enables you to insert random content into your Sketch files and you can specifiy what type of content for each layer.
 
 - You can choose from 130+ types of data (Full Name, Email Address, Telephone, Paragraph, etc)
 - It will insert a random version of that data into the specific layer that you select
@@ -251,7 +251,7 @@ For example, if you want a `First Name` to be German, you would use `name.firstN
 
 See the full list of locales below. Note that Sketch Data Faker will fall back to English if the locale code is wrong or if there is no available translation for that term.
 
-## List of Locales
+### List of Locales
 - az
 - cz
 - de
