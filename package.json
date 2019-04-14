@@ -1,6 +1,6 @@
 {
   "name": "sketch-data-faker",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "A Sketch plugin providing 100+ types of realistic (fake) data for your mockups from Faker.js and other sources.",
   "engines": {
     "sketch": ">=3.0"
@@ -29,7 +29,7 @@
     "postinstall": "npm run build && skpm-link"
   },
   "devDependencies": {
-    "@skpm/builder": "^0.5.15"
+    "@skpm/builder": "^0.6.0"
   },
   "dependencies": {
     "faker": "^4.1.0"
