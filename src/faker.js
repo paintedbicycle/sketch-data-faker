@@ -4,7 +4,7 @@ const util = require('util');
 const faker = require('faker');
 
 import config from './config';
-import { showUserErrors, googleAnalytics } from './utilities';
+import { showUserErrors } from './utilities';
 
 let debugMode = config.debug;
 
@@ -41,55 +41,33 @@ export function supplyFakerData(context, type) {
     switch (type) {
       case 'fullName':
         newLayerData = faker.name.findName();
-        if (!debugMode)
-          googleAnalytics(context, 'Get Data', 'Faker', 'Full Name');
         break;
       case 'firstName':
         newLayerData = faker.name.firstName();
-        if (!debugMode)
-          googleAnalytics(context, 'Get Data', 'Faker', 'First Name');
         break;
       case 'lastName':
         newLayerData = faker.name.lastName();
-        if (!debugMode)
-          googleAnalytics(context, 'Get Data', 'Faker', 'Last Name');
         break;
       case 'email':
         newLayerData = faker.internet.email();
-        if (!debugMode) googleAnalytics(context, 'Get Data', 'Faker', 'Email');
         break;
       case 'phoneNumber':
         newLayerData = faker.phone.phoneNumber();
-        if (!debugMode)
-          googleAnalytics(context, 'Get Data', 'Faker', 'Phone Number');
         break;
       case 'loremSentence':
         newLayerData = faker.lorem.sentence();
-        if (!debugMode)
-          googleAnalytics(context, 'Get Data', 'Faker', 'Lorem Sentence');
         break;
       case 'loremParagraph':
         newLayerData = faker.lorem.paragraph();
-        if (!debugMode)
-          googleAnalytics(context, 'Get Data', 'Faker', 'Lorem Paragraph');
         break;
       case 'loremParagraphs':
         newLayerData = faker.lorem.paragraphs();
-        if (!debugMode)
-          googleAnalytics(context, 'Get Data', 'Faker', 'Lorem Paragraphs');
         break;
       default:
         // Set custom to true so we can override layer name
         custom = true;
         try {
           newLayerData = faker.fake(searchTerm);
-          if (!debugMode)
-            googleAnalytics(
-              context,
-              'Get Data',
-              'Faker Auto',
-              originalLayerName
-            );
         } catch (e) {
           layerError = true;
           errors.push({
