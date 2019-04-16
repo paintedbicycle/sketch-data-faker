@@ -1,8 +1,6 @@
 const sketch = require('sketch');
 const UI = require('sketch/ui');
 
-import config from './config';
-
 export function changeLayerName(newLayerName) {
   const document = sketch.getSelectedDocument();
   const selectedLayers = document.selectedLayers;
@@ -13,12 +11,10 @@ export function changeLayerName(newLayerName) {
       UI.message('No layers are selected.');
       //errors.push('No layers are selected.');
     } else {
-      console.log('Layers', selectedLayers);
-
       selectedLayers.forEach(selectedLayer => {
         let layer = document.getLayerWithID(
-          selectedLayer.override
-            ? selectedLayer.override.path
+          selectedLayer.symbolInstance
+            ? selectedLayer.symbolInstance.id
             : selectedLayer.id
         );
         layer.name = newLayerName;

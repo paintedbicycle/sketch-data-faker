@@ -3,10 +3,7 @@ const { DataSupplier } = sketch;
 const util = require('util');
 const faker = require('faker');
 
-import config from './config';
 import { showUserErrors } from './utilities';
-
-let debugMode = config.debug;
 
 export function supplyFakerData(context, type) {
   let dataKey = context.data.key;
@@ -22,8 +19,9 @@ export function supplyFakerData(context, type) {
     // In order to work in both layers and symbols we grab the original
     // layer by getting the id from either the override or the layer
     let layer = document.getLayerWithID(
-      item.override ? item.override.path : item.id
+      item.symbolInstance ? item.symbolInstance.id : item.id
     );
+
     let originalLayerName = layer.name;
     let search = originalLayerName.split('|')[0];
     let locale = originalLayerName.split('|')[1];
