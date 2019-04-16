@@ -324,7 +324,7 @@ See the full list of locales below. Note that Sketch Data Faker will fall back t
 - zh_TW
 
 ## Changelog
-
+- 0.6 - Use on text layers as part of library imports
 - 0.4 - New Feautre: i18n
 - 0.2.1 - New Feature: Layer renaming helper in plugin menu
 - 0.1.9 - New Feature: Ability to use on symbols
