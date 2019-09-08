@@ -62,6 +62,7 @@ There are 2 ways to use it: Manual (Basic) and Automatic (Recommended)
 - When you right click on the layer and go to the same menu as above, but this time, choose the `Auto (Layer Name)` option from the menu.
 - Your layer text will be replaced with random data of whatever type you changed your layer name to
 - The rest will work the same way as manual mode above.
+- This will work fine with Symbols, including symbols that have multiple text layers inside
 
 #### Automatic Mode Content Types
 
@@ -324,6 +325,8 @@ See the full list of locales below. Note that Sketch Data Faker will fall back t
 - zh_TW
 
 ## Changelog
+
+- 0.6.1 - Revert work on library imports in order to fix bug with symbols
 - 0.6 - Use on text layers as part of library imports
 - 0.4 - New Feautre: i18n
 - 0.2.1 - New Feature: Layer renaming helper in plugin menu
