@@ -1,9 +1,9 @@
-const sketch = require('sketch');
+const sketch = require("sketch");
 const { DataSupplier } = sketch;
-const util = require('util');
-const faker = require('faker');
+const util = require("util");
+const faker = require("faker");
 
-import { showUserErrors } from './utilities';
+import { showUserErrors } from "./utilities";
 
 export function supplyFakerData(context, type) {
   let dataKey = context.data.key;
@@ -18,47 +18,54 @@ export function supplyFakerData(context, type) {
 
     // In order to work in both layers and symbols we grab the original
     // layer by getting the id from either the override or the layer
-    let layer = document.getLayerWithID(
-      item.symbolInstance ? item.symbolInstance.id : item.id
-    );
+
+    let layerId;
+    if (item.type === "Text") {
+      layerId = item.id;
+    } else if (item.type === "DataOverride") {
+      layerId = item.override.path;
+    }
+
+    // item.id is for regular layers
+    let layer = document.getLayerWithID(layerId);
 
     let originalLayerName = layer.name;
-    let search = originalLayerName.split('|')[0];
-    let locale = originalLayerName.split('|')[1];
+    let search = originalLayerName.split("|")[0];
+    let locale = originalLayerName.split("|")[1];
 
     // Set up search string
-    let searchTerm = '{{' + search + '}}';
+    let searchTerm = "{{" + search + "}}";
 
     // Set up locale
     if (locale) {
       faker.locale = locale;
     } else {
-      faker.locale = 'en';
+      faker.locale = "en";
     }
 
     switch (type) {
-      case 'fullName':
+      case "fullName":
         newLayerData = faker.name.findName();
         break;
-      case 'firstName':
+      case "firstName":
         newLayerData = faker.name.firstName();
         break;
-      case 'lastName':
+      case "lastName":
         newLayerData = faker.name.lastName();
         break;
-      case 'email':
+      case "email":
         newLayerData = faker.internet.email();
         break;
-      case 'phoneNumber':
+      case "phoneNumber":
         newLayerData = faker.phone.phoneNumber();
         break;
-      case 'loremSentence':
+      case "loremSentence":
         newLayerData = faker.lorem.sentence();
         break;
-      case 'loremParagraph':
+      case "loremParagraph":
         newLayerData = faker.lorem.paragraph();
         break;
-      case 'loremParagraphs':
+      case "loremParagraphs":
         newLayerData = faker.lorem.paragraphs();
         break;
       default:
@@ -69,7 +76,7 @@ export function supplyFakerData(context, type) {
         } catch (e) {
           layerError = true;
           errors.push({
-            type: 'noData',
+            type: "noData",
             layer: {
               name: layer.name
             }
