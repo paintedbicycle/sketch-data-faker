@@ -7,6 +7,7 @@ import { showUserErrors } from "./utilities";
 
 export function supplyFakerData(context, type) {
   let dataKey = context.data.key;
+
   const document = sketch.getSelectedDocument();
   const items = util.toArray(context.data.items).map(sketch.fromNative);
   let errors = [];
@@ -19,17 +20,19 @@ export function supplyFakerData(context, type) {
     // In order to work in both layers and symbols we grab the original
     // layer by getting the id from either the override or the layer
 
-    let layerId;
+    let layer;
+    let originalLayerName;
     if (item.type === "Text") {
-      layerId = item.id;
+      // item.id is for regular layers
+      layer = document.getLayerWithID(item.id);
+      originalLayerName = layer.name;
     } else if (item.type === "DataOverride") {
-      layerId = item.override.path;
+      // For overrides we can just grab the name directly
+      // Sketch already knows the layer it's going to apply to so we don't
+      // actually need the full layer
+      originalLayerName = item.override.affectedLayer.name;
     }
 
-    // item.id is for regular layers
-    let layer = document.getLayerWithID(layerId);
-
-    let originalLayerName = layer.name;
     let search = originalLayerName.split("|")[0];
     let locale = originalLayerName.split("|")[1];
 
@@ -78,7 +81,7 @@ export function supplyFakerData(context, type) {
           errors.push({
             type: "noData",
             layer: {
-              name: layer.name
+              name: layer && layer.name ? layer.name : originalLayerName
             }
           });
         }
@@ -94,7 +97,7 @@ export function supplyFakerData(context, type) {
     // The DataSupplier method above overwrites the layer name
     // so we now put the original layer name back again so the next
     // time the user runs our plugin, the name is correct
-    if (custom === true) {
+    if (layer && custom === true) {
       layer.name = originalLayerName;
     }
   });
