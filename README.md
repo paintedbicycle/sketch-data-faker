@@ -6,6 +6,7 @@ Sketch Data Faker enables you to insert random content into your Sketch files an
 - It will insert a random version of that data into the specific layer that you select
 - You can refresh your layer to get a different value of that same type of data
 - It works inside Symbols, so one duplicated symbol can have different random content of the same type (i.e. a list of names)
+- It also works with Symbols imported from Libraries
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -62,7 +63,7 @@ There are 2 ways to use it: Manual (Basic) and Automatic (Recommended)
 - When you right click on the layer and go to the same menu as above, but this time, choose the `Auto (Layer Name)` option from the menu.
 - Your layer text will be replaced with random data of whatever type you changed your layer name to
 - The rest will work the same way as manual mode above.
-- This will work fine with Symbols, including symbols that have multiple text layers inside
+- This will work fine with Symbols, including symbols that have multiple text layers inside and symbols imported from Libraries
 
 #### Automatic Mode Content Types
 
