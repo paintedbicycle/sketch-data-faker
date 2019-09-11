@@ -47,10 +47,10 @@ Sketch Data Faker enables you to insert random, yet predictable content into you
 - Once installed, data will become available to you in the native Sketch Data Menu just like other types of data.
 - You can view more about how to use Sketch's Data features here: <https://sketchapp.com/docs/data/>
 
-There are 2 ways to use it: Manual (Basic) and Automatic (Recommended)
+There are 2 ways to use it: Manual and Automatic (Recommended)
 
 - In **manual mode**, you select one of the default types of data that Sketch Data Faker has made available in the dropdown menu. No setup/changes to your Sketch file needed, but there are only a few types of data available
-- In **automatic mode** (recommended), you can insert much more data - over 130 types of data, by _renaming your text layer_ with the name of the content you want. Refer to the [chart below](#full-list-of-available-content) for the names to use.
+- In **automatic mode**, you can insert much more data - over 130 types of data, by _renaming your text layer_ with the name of the content you want. Refer to the [chart below](#full-list-of-available-content) for the names to use.
 
 ### Using Manual Mode
 
