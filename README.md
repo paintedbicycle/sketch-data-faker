@@ -1,12 +1,12 @@
 # Sketch Data Faker
 
-Sketch Data Faker enables you to insert random content into your Sketch files and you can specify what type of content for each layer.
+Sketch Data Faker enables you to insert random, yet predictable content into your Sketch files. You can specify what type of content to insert for each layer.
 
-- You can choose from 130+ types of data (Full Name, Email Address, Telephone, Paragraph, etc)
-- It will insert a random version of that data into the specific layer that you select
-- You can refresh your layer to get a different value of that same type of data
-- It works inside Symbols, so one duplicated symbol can have different random content of the same type (i.e. a list of names)
-- It also works with Symbols imported from Libraries
+- You can choose from 130+ types of data including Full Name, Email Address, Telephone, Paragraph, etc
+- It will insert a random version of that data into the layer that you specify
+- You can refresh that layer over and over to get a different version of that same type of data
+- It also works inside symbols. This means one duplicated symbol can have different random content of the same type (i.e. creating a list of names in a table)
+- It also works with symbols imported from Sketch Libraries
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -54,25 +54,28 @@ There are 2 ways to use it: Manual (Basic) and Automatic (Recommended)
 
 ### Using Manual Mode
 
-1. To use **manual mode**, right-click on the text layer and look inside the `Sketch Data Faker` menu, which is inside the `Data Feeds` menu. Choose the type of data you want to insert. For example if you choose `Full Name`, your layer will now be replaced with a random full name (i.e. Jane Doe).
-2. The layer text will be replaced with whatever type of data you chose. It's now linked up and good to go. You can even refresh the data to get different data from the same type and it works inside symbols, offering unique data for each symbol.
+1. To use **manual mode**, right-click on a text layer. Inside the `Data Feeds` menu that, look for `Sketch Data Faker`. 
+2. Inside there you can choose the type of data you want to insert into your layer. For example if you choose `Full Name`, your layer will now be replaced with a random full name (i.e. Jane Doe).
+
+- The layer text will be replaced with whatever type of data you chose. 
+- It's now linked up permanently and good to go, so you can refresh the data to get different content of the same type
+- It also works inside symbols and library imports, offering unique content for each layer
 
 ### Using Automatic Mode (Recommended)
 
-1. In **automatic mode** you **rename your layer** to tell the plugin what type of data you want (see the chart below for all the data types you can use).
-2. Then, you right click on the layer and go to the Data Feeds menu, and choose the `Auto (Layer Name)` option from the menu. This tells the plugin to read the layer name and insert that type of data. You only need to do this once per layer and you can do it to multiple layers at the same time
-3. Your layer text will be replaced with random data of whatever type you changed your layer name to
-- This will work fine with Symbols, including symbols that have multiple text layers inside and symbols imported from Libraries
+1. In **automatic mode** you first **rename your layer** to tell the plugin what type of data you want to receive (see the chart below for all the data types you can use).
+2. Then, you right-click on the layer and go to the `Data Feeds` menu, and inside `Sketch Data Faker`, choose the `Auto (Layer Name)` option. This tells the plugin to read your layer name and insert that type of data. You only need to do this once per layer and you can do it to multiple layers at the same time
+
+- Your layer text will now be replaced with random data of whatever type you changed your layer name to
+- You can refresh to get different content of the same time
+- It also works inside symbols and library imports, offering unique content for each layer
 
 #### Automatic Mode Content Types
 
-- Once you select **Automatic Mode** by setting your layer to use `Auto (Layer Name)` from the _Sketch Data Faker_ menu, you then rename your layer to insert the over 130 types of text data.
 - The chart below has the data types (i.e. `address.zipCode`) that you can choose from.
-- To use the data types, you first put the category name followed by the data type with a dot (".") in between. For example: `address.zipCode` will give you a US zip code.
-- Make sure to use the exact spelling including capitalization.
+- Make sure to use the exact spelling including capitalization and the "."
 
 Quick examples:
-
 - To insert a US Zip Code, rename your text layer `address.zipCode`
 - To insert a Street Name, rename your text layer `address.streetName`
 - To insert a random sentence, rename your text layer `lorem.sentence`
@@ -82,7 +85,7 @@ Quick examples:
 
 ### Layer Renaming Helper
 
-If you want help renaming your layers, Sketch Data Faker provides a menu inside the Sketch Plugin menu that will allow you to change your layer names without typing:
+If you want help renaming your layers, `Sketch Data Faker` provides a menu inside the `Sketch Plugin` menuitem that will allow you to change your layer names without typing:
 
 1. In Sketch, select the layer(s) you want to rename
 2. Go to `Plugins -> Sketch Data Faker -> Set Layer Name` and choose the type of content you want to insert into that layer
