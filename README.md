@@ -49,20 +49,19 @@ Sketch Data Faker enables you to insert random content into your Sketch files an
 
 There are 2 ways to use it: Manual (Basic) and Automatic (Recommended)
 
-- In **manual mode**, you select one of the specific pre-built types of data that Sketch Data Faker has made available in the dropdown menu. No setup/changes to your Sketch file needed.
-- In **automatic mode** (recommended), you can insert much more data - over 130 types of data, by _renaming your text layer_ using the chart below.
+- In **manual mode**, you select one of the default types of data that Sketch Data Faker has made available in the dropdown menu. No setup/changes to your Sketch file needed, but there are only a few types of data available
+- In **automatic mode** (recommended), you can insert much more data - over 130 types of data, by _renaming your text layer_ with the name of the content you want. Refer to the [chart below](#full-list-of-available-content) for the names to use.
 
-### Manual Mode
+### Using Manual Mode
 
-- To use **manual mode**, right-click on the text layer and look inside the `Sketch Data Faker` menu inside the `Data Feeds` menu. Choose the type of data you want to insert. For example if you choose `Full Name`, your layer will now be replaced with a random full name (i.e. Jane Doe).
+- To use **manual mode**, right-click on the text layer and look inside the `Sketch Data Faker` menu, which is inside the `Data Feeds` menu. Choose the type of data you want to insert. For example if you choose `Full Name`, your layer will now be replaced with a random full name (i.e. Jane Doe).
 - The layer text will be replaced with whatever type of data you chose. It's now linked up and good to go. You can even refresh the data to get different data from the same type and it works inside symbols, offering unique data for each symbol.
 
-### Automatic Mode (Recommended)
+### Using Automatic Mode (Recommended)
 
-- In **automatic mode** you **re-name your layer** with the type of data you want (see the chart below for all the data types you can use).
-- When you right click on the layer and go to the same menu as above, but this time, choose the `Auto (Layer Name)` option from the menu.
+1. In **automatic mode** you **rename your layer** to tell the plugin what type of data you want (see the chart below for all the data types you can use).
+2. Then, you right click on the layer and go to the Data Feeds menu, and choose the `Auto (Layer Name)` option from the menu. This tells the plugin to read the layer name and insert that type of data.
 - Your layer text will be replaced with random data of whatever type you changed your layer name to
-- The rest will work the same way as manual mode above.
 - This will work fine with Symbols, including symbols that have multiple text layers inside and symbols imported from Libraries
 
 #### Automatic Mode Content Types
