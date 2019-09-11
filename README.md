@@ -54,14 +54,14 @@ There are 2 ways to use it: Manual (Basic) and Automatic (Recommended)
 
 ### Using Manual Mode
 
-- To use **manual mode**, right-click on the text layer and look inside the `Sketch Data Faker` menu, which is inside the `Data Feeds` menu. Choose the type of data you want to insert. For example if you choose `Full Name`, your layer will now be replaced with a random full name (i.e. Jane Doe).
-- The layer text will be replaced with whatever type of data you chose. It's now linked up and good to go. You can even refresh the data to get different data from the same type and it works inside symbols, offering unique data for each symbol.
+1. To use **manual mode**, right-click on the text layer and look inside the `Sketch Data Faker` menu, which is inside the `Data Feeds` menu. Choose the type of data you want to insert. For example if you choose `Full Name`, your layer will now be replaced with a random full name (i.e. Jane Doe).
+2. The layer text will be replaced with whatever type of data you chose. It's now linked up and good to go. You can even refresh the data to get different data from the same type and it works inside symbols, offering unique data for each symbol.
 
 ### Using Automatic Mode (Recommended)
 
 1. In **automatic mode** you **rename your layer** to tell the plugin what type of data you want (see the chart below for all the data types you can use).
-2. Then, you right click on the layer and go to the Data Feeds menu, and choose the `Auto (Layer Name)` option from the menu. This tells the plugin to read the layer name and insert that type of data.
-- Your layer text will be replaced with random data of whatever type you changed your layer name to
+2. Then, you right click on the layer and go to the Data Feeds menu, and choose the `Auto (Layer Name)` option from the menu. This tells the plugin to read the layer name and insert that type of data. You only need to do this once per layer and you can do it to multiple layers at the same time
+3. Your layer text will be replaced with random data of whatever type you changed your layer name to
 - This will work fine with Symbols, including symbols that have multiple text layers inside and symbols imported from Libraries
 
 #### Automatic Mode Content Types
