@@ -54,7 +54,7 @@ There are 2 ways to use it: Manual and Automatic (Recommended)
 
 ### Using Manual Mode
 
-1. To use **manual mode**, right-click on a text layer. Inside the `Data Feeds` menu that, look for `Sketch Data Faker`. 
+1. To use manual mode, right-click on a text layer. Inside the `Data Feeds` menu that, look for `Sketch Data Faker`. 
 2. Inside there you can choose the type of data you want to insert into your layer. For example if you choose `Full Name`, your layer will now be replaced with a random full name (i.e. Jane Doe).
 
 - The layer text will be replaced with whatever type of data you chose. 
@@ -63,7 +63,7 @@ There are 2 ways to use it: Manual and Automatic (Recommended)
 
 ### Using Automatic Mode (Recommended)
 
-1. In **automatic mode** you first **rename your layer** to tell the plugin what type of data you want to receive (see the chart below for all the data types you can use).
+1. In automatic mode you first **rename your layer** to tell the plugin what type of data you want to receive (see the [chart below](#full-list-of-available-content) for all the data types you can use).
 2. Then, you right-click on the layer and go to the `Data Feeds` menu, and inside `Sketch Data Faker`, choose the `Auto (Layer Name)` option. This tells the plugin to read your layer name and insert that type of data. You only need to do this once per layer and you can do it to multiple layers at the same time
 
 - Your layer text will now be replaced with random data of whatever type you changed your layer name to
