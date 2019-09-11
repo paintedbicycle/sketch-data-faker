@@ -66,8 +66,8 @@ There are 2 ways to use it: Manual and Automatic (Recommended)
 1. In automatic mode you first **rename your layer** to tell the plugin what type of data you want to receive (see the [chart below](#full-list-of-available-content) for all the data types you can use).
 2. Then, you right-click on the layer and go to the `Data Feeds` menu, and inside `Sketch Data Faker`, choose the `Auto (Layer Name)` option. This tells the plugin to read your layer name and insert that type of data. You only need to do this once per layer and you can do it to multiple layers at the same time
 
-- Your layer text will now be replaced with random data of whatever type you changed your layer name to
-- You can refresh to get different content of the same time
+- Your layer text will now be replaced with data matching what you asked for
+- You can refresh to get different content of the same type
 - It also works inside symbols and library imports, offering unique content for each layer
 
 #### Automatic Mode Content Types
