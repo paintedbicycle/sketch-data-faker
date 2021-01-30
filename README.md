@@ -328,7 +328,7 @@ See the full list of locales below. Note that Sketch Data Faker will fall back t
 - zh_TW
 
 ## Changelog
-
+- 0.8.0 - Update depenencies including support Faker.js 5.2.0 with more data!
 - 0.7.0 - Bring back ability to use in Symbols imported from Libraries
 - 0.6.1 - Revert work on library imports in order to fix bug with symbols
 - 0.6 - Use on text layers as part of library imports
